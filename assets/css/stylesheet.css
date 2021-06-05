@@ -1,0 +1,632 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+    background-color: transparent;
+}
+
+:root {
+    --light-tan: rgb(247, 236, 223);
+    --dark-grey: rgb(63, 56, 56);
+    --tan: tan;
+    --black: black;
+    --white: white;
+    --light-blue: #7df9ff;
+    --red: red;
+    --planes-teal: invert(51%) sepia(47%) saturate(385%) hue-rotate(135deg) brightness(95%) contrast(87%);
+    --offwhite-filter: invert(100%) sepia(44%) saturate(2325%) hue-rotate(180deg) brightness(106%) contrast(103%);
+    --white-filter: invert(99%) sepia(28%) saturate(506%) hue-rotate(306deg) brightness(116%) contrast(100%);
+    --black-filter: invert(0%) sepia(0%) saturate(7465%) hue-rotate(327deg) brightness(107%) contrast(107%);
+    --dark-grey-filter: invert(19%) sepia(8%) saturate(554%) hue-rotate(314deg) brightness(92%) contrast(86%);
+    --red-filter: invert(14%) sepia(96%) saturate(6262%) hue-rotate(1deg) brightness(114%) contrast(119%);
+    --light-blue-filter: invert(85%) sepia(16%) saturate(1328%) hue-rotate(149deg) brightness(103%) contrast(103%);
+    --navy-filter: invert(11%) sepia(75%) saturate(4455%) hue-rotate(240deg) brightness(72%) contrast(133%);
+    --lavender-filter: invert(95%) sepia(9%) saturate(1694%) hue-rotate(184deg) brightness(100%) contrast(98%);
+    --apple-grey-filter: invert(31%) sepia(17%) saturate(14%) hue-rotate(359deg) brightness(94%) contrast(83%);
+    --instagram-violet-filter: invert(48%) sepia(64%) saturate(4278%) hue-rotate(274deg) brightness(88%) contrast(100%);
+    --facebook-blue-filter: invert(37%) sepia(11%) saturate(3054%) hue-rotate(182deg) brightness(98%) contrast(84%);
+    --linktree-green-filter: invert(85%) sepia(21%) saturate(384%) hue-rotate(89deg) brightness(93%) contrast(87%);
+    --tiktok-teal-filter: invert(76%) sepia(14%) saturate(1136%) hue-rotate(135deg) brightness(93%) contrast(92%);
+    --twitter-blue-filter: invert(65%) sepia(82%) saturate(4531%) hue-rotate(164deg) brightness(99%) contrast(101%);
+    --spotify-green-filter: invert(56%) sepia(86%) saturate(396%) hue-rotate(89deg) brightness(86%) contrast(100%);
+}
+
+.opaque {
+    opacity: 0.7;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
+
+/*______________________________ Body __________________________________*/
+
+body {
+    width: 100%;
+    min-height: fit-content;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+#background-image {
+    width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background: url('/assets/images/lance/lance-ocean-centered-1.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#background-image::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+#loading-wrapper {
+    z-index: 5;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+
+.loaded-wrapper {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 2s ease-out;
+    transition: all 2s ease-out;
+}
+
+#loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+#loading-logo {
+    height: 15vh;
+    width: fit-content;
+    filter: var(--white-filter);
+    transition: filter 0.25s;
+}
+
+/*______________________________ Header __________________________________*/
+#header{
+    z-index: 5;
+    position: fixed;
+    width: 100%;
+    color: var(--header-text-color);
+    opacity: var(--opacity);
+    background-color: var(--header-background-color);
+}
+
+.header-top {
+    z-index: 5;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    height: var(--header-height);
+    border: 0;
+    transition: all 0.25s;
+}
+
+.top {
+    --header-background-color: transparent;
+    --header-text-color: var(--black);
+    --header-text-hover: var(--dark-grey);
+    --header-logo-color: var(--black-filter);
+    --header-logo-hover: var(--dark-grey-filter);
+    --social-links-color: var(--black-filter);
+    --tidal-filter: var(--offwhite-filter);
+    --nav-button-width: 0.15rem;
+    --nav-button-height: 100%;
+    --opacity: 1;
+}
+
+.scrolled {
+    --header-text-color: var(--black);
+    --header-text-hover: var(--dark-grey);
+    --header-logo-color: var(--black-filter);
+    --header-logo-hover: var(--dark-grey-filter);
+    --social-links-color: var(--dark-grey-filter);
+    --tidal-filter: var(--offwhite-filter);
+    --nav-button-width: 0.12rem;
+    --nav-button-height: 80%;
+    --opacity: 0.7;
+}
+
+.mobile {
+    --nav-menu-link-padding: 0 2.25% 0.25% 2.25%;
+    --nav-menu-font-size: 1.4vmax;
+    --featured-header-size: 5vmax;
+    --content-width: 80%;
+    --album-image-width: 70%;
+    --album-image-margin: 15%;
+    --video-container-width: 80%;
+}
+
+.top-mobile {
+    --header-height: 9.9vh;
+    --header-logo-height: 9vh;
+}
+
+.scrolled-mobile {
+    --header-height: 6.9vh;
+    --header-logo-height: 6vh;
+}
+
+.desktop {
+    --nav-menu-link-padding: 0% 5% 0.5% 5%;
+    --nav-menu-font-size: 1vmax;
+    --featured-header-size: 3vmax;
+    --content-width: 80%;
+    --album-image-width: 27.5%;
+    --album-image-margin: 2.9166666667%;
+    --video-container-width: 60%;
+}
+
+.top-desktop {
+    --header-height: 12.9vh;
+    --header-logo-height: 12vh;
+    --header-background-color: transparent;
+}
+
+.scrolled-desktop {
+    --header-height: 8.9vh;
+    --header-logo-height: 8vh; 
+}
+
+.nav-open-scrolled {
+    --header-background-color: white;
+}
+
+/* ----------- Header Logo --------------------------*/
+.header-logo {
+    cursor: pointer;
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+}
+
+#logo {
+    height: var(--header-logo-height);
+    filter: var(--header-logo-color);
+    transition: filter 0.25s, visibility 0.005s;
+}
+
+#logo:hover {
+    filter: var(--header-logo-hover);
+}
+
+/* ----------- Navigation Drop-down Button --------------------------*/
+.nav-button {
+    z-index: 5;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    margin-right: 2%;
+    height: 30px;
+    width: 40px;
+    opacity: 1;
+}
+
+.nav-button::before, .nav-button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: var(--nav-button-width);
+    height: var(--nav-button-height);
+    transition: all 0.25s;
+}
+
+.nav-button::before {
+    top: 3px;
+    -webkit-transform: rotate(90deg);       
+    -ms-transform: rotate(90deg);           
+    transform: rotate(90deg);
+    background-color: var(--header-text-color);
+}
+
+.nav-button::after {
+    top: -3px;
+    -webkit-transform: rotate(-90deg);       
+    -ms-transform: rotate(-90deg);           
+    transform: rotate(-90deg);   
+    background-color: var(--header-text-color);
+}
+
+.open.nav-button::before {
+    top: 0px;
+    -webkit-transform: rotate(-45deg);       
+    -ms-transform: rotate(-45deg);           
+    transform: rotate(-45deg);
+}
+
+.open.nav-button::after {
+    top: 0px;
+    -webkit-transform: rotate(45deg);       
+    -ms-transform: rotate(45deg);           
+    transform: rotate(45deg);
+}
+
+/*_________________________________Navigation______________________________________________*/
+
+.navigation-dropdown {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: all 0.25s;
+    border: 0;
+    opacity: var(--opacity);
+}
+
+.nav-open {
+    visibility: visible;
+    height: 4.0vh;
+    font-size: var(--nav-menu-font-size);
+}
+
+.nav-hidden {
+    visibility: hidden;
+    height: 0vh;
+    font-size: 0;
+}
+
+.nav-element {
+    margin: 0;
+    padding: var(--nav-menu-link-padding);
+    white-space: nowrap;
+    text-decoration: none;
+    color: var(--header-text-color);
+}
+
+.nav-element p:hover {
+    cursor: pointer;
+    color: var(--header-text-hover);
+}
+
+/*_______________________Main______________________________*/
+
+#main {
+    z-index: 1;
+    position: relative;
+    display: block;
+    top: var(--header-height);
+    height: fit-content;
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    padding-bottom: 3%;
+}
+
+.section-container {
+    width: var(--content-width);
+    text-align: center;
+}
+
+.section-header {
+    font-size: 4.5vmax;
+    letter-spacing: 0.2vmax;
+    font-weight: 1;
+    margin-block-start: 2vmax;
+    margin-block-end: 2vmax;
+    display: inline-block;
+}
+
+/*------------ Featured Content ----------------------------*/
+#featured-container {
+    z-index: 1;
+    padding-top: 4vh;
+    min-height: 87.1vh;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#featured-content {
+    width: fit-content;
+    height: fit-content;
+    padding: 2vh 2vw;
+}
+
+#featured-content h2 {
+    font-size: 7vmax;
+    margin-block-start: 0;
+    margin-block-end: 1vh;
+    font-weight: normal;
+    letter-spacing: 0.6vmax;
+}
+
+#featured-content a {
+    text-decoration: none;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding: 2% 5%;
+    border: black solid 0.35vmax;
+    color: black;
+    transition: all .25s;
+}
+
+#featured-content a:hover {
+    color: white;
+    border-color: white;
+    border-radius: 20px;
+}
+
+#featured-content h4 {
+    cursor: pointer;
+    font-size: 2.5vmax;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-weight: normal;
+}
+
+#featured-content-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+}
+
+/* ---------- Discography/Music ----------------------------*/
+#music-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: fit-content;
+}
+
+.album-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: var(--album-image-width);
+    margin: 1.5% var(--album-image-margin);
+}
+
+.album {
+    width: 100%;
+    cursor: pointer;
+    border: 0.5px black solid;
+}
+
+.album:hover{
+    opacity: 0.9;
+}
+
+.music-player {
+    transition: height 0.2s;
+}
+
+.expand-music-arrow {
+    margin: 1% 2% 0% 0%;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    height: 30px;
+    width: 100%;
+    opacity: 1;
+}
+
+.expand-music-arrow::before, .expand-music-arrow::after {
+    margin-top: 1%;
+    content: "";
+    width: 0.2rem;
+    height: 25%;
+}
+
+.expand-music-arrow::before {
+    -webkit-transform: rotate(-45deg);       
+    -ms-transform: rotate(-45deg);           
+    transform: rotate(-45deg);
+    background-color: black;
+}
+
+.expand-music-arrow::after {
+    -webkit-transform: rotate(45deg);       
+    -ms-transform: rotate(45deg);           
+    transform: rotate(45deg);   
+    background-color: black;
+}
+
+.music-expanded.expand-music-arrow::before {
+    -webkit-transform: rotate(45deg);       
+    -ms-transform: rotate(45deg);           
+    transform: rotate(45deg);
+}
+
+.music-expanded.expand-music-arrow::after {
+    -webkit-transform: rotate(-45deg);       
+    -ms-transform: rotate(-45deg);           
+    transform: rotate(-45deg);
+}
+
+/* ---------- Videos ---------------------------------------*/
+
+#visuals-container {
+    width: var(--video-container-width);
+    text-align: center;
+}
+
+#video-container {
+    padding-bottom: 56.25%;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    border: black 1px solid;
+}
+
+.current-video {
+    visibility: visible;
+}
+
+.hidden-video {
+    visibility: hidden;
+}
+
+.video-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    margin-top: 2%;
+}
+
+.video-nav-circle {
+    cursor: pointer;
+    height: 1.25vmax;
+    width: 1.25vmax;
+    background-color: white;
+    opacity: 0.7;
+    border-radius: 50%;
+    border: 1.5px solid black;
+    margin: 0% 0.5%;
+}
+
+.current-video-button, .video-nav-circle:hover {
+    opacity: 1;
+}
+
+/* ----------- Social Media Links --------------------------*/
+#socials-container {
+    z-index: 2;
+    position: fixed;
+    height: 100vh;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    padding-right: 2%;
+    opacity: var(--opacity);
+}
+
+#main-social-links {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 1% 1% 1% 1%;
+    transition: all 0.5s;
+}
+
+.social-link {
+    z-index: 2;
+    display: block;
+    width: fit-content;
+    padding-bottom: 10%;
+    padding-top: 10%;
+}
+
+.social-img {
+    height: 2.15vmax;
+    filter: var(--social-links-color);
+}
+
+.apple:hover {
+    filter: var(--apple-grey-filter);
+}
+
+.instagram:hover {
+    filter: var(--instagram-violet-filter);
+}
+
+.facebook:hover {
+    filter: var(--facebook-blue-filter);
+}
+
+.linktree:hover {
+    filter: var(--linktree-green-filter);
+}
+
+.spotify:hover {
+    filter: var(--spotify-green-filter);
+}
+
+.tidal:hover {
+    filter: var(--tidal-filter);
+}
+
+.tiktok:hover {
+    filter: var(--tiktok-teal-filter);
+}
+
+.twitter:hover {
+    filter: var(--twitter-blue-filter);
+}
+
+.youtube:hover {
+    filter: var(--red-filter);
+}
+
+/* --------------- Footer ------------------------------- */
+footer {
+    background-color: black;
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 0;
+}
+
+#footer-logo {
+    height: 6vmax;
+    filter: var(--white-filter);
+}
