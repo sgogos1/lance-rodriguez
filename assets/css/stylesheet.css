@@ -49,26 +49,15 @@
 
 body {
     width: 100%;
-    min-height: fit-content;
+    min-height: 100%;
     height: auto;
     margin: 0;
     padding: 0;
     border: 0;
-}
-
-body::before {
-    content: "";
-    min-width: 100%;
-    min-height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: url('/assets/images/lance/lance-ocean-centered-1.jpg') no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    z-index: -100;
+    background-image: url('/assets/images/lance/lance-ocean-centered-1.jpg');
+    background-position: top center;
+    background-attachment: fixed;
+    background-size: var(--background-size);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
 }
@@ -160,6 +149,7 @@ body::before {
     --album-image-width: 70%;
     --album-image-margin: 15%;
     --video-container-width: 80%;
+    --background-size: auto 100%;
 }
 
 .top-mobile {
@@ -180,6 +170,7 @@ body::before {
     --album-image-width: 27.5%;
     --album-image-margin: 2.9166666667%;
     --video-container-width: 60%;
+    --background-size: cover;
 }
 
 .top-desktop {
