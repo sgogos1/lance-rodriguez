@@ -62,8 +62,8 @@ body {
 
 #background {
     background-image: url('/assets/images/lance/lance-ocean-centered-1-blurred.webp');
-    /* background-position: top center;
-    background-attachment: fixed; */
+    background-position: top center;
+    background-attachment: fixed;
     background-size: cover;
     position: fixed;
     top: 0;
