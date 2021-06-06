@@ -71,6 +71,8 @@ function pageSize(){
 }
 
 function adjustScrollClasses(windowLoc, mode){
+    body.setAttribute("background-size", `${window.innerWidth} ${window.innerHeight}`);
+
     if (windowLoc == "top"){
         body.classList.add(`top-${mode}`);
         body.classList.remove(`scrolled-${mode}`);
