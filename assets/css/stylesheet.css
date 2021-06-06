@@ -54,14 +54,23 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
-    background-image: url('/assets/images/lance/lance-ocean-centered-1-blurred.webp');
-    background-position: top center;
-    background-attachment: fixed;
-    background-size: var(--background-size);
 }
 
 .pre-load {
     overflow: hidden;
+}
+
+#background {
+    background-image: url('/assets/images/lance/lance-ocean-centered-1-blurred.webp');
+    /* background-position: top center;
+    background-attachment: fixed; */
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1000;
 }
 
 #loading-wrapper {
