@@ -374,6 +374,7 @@ body {
 }
 
 #featured-content a {
+    min-width: fit-content;
     text-decoration: none;
     margin-right: 5%;
     margin-left: 5%;
