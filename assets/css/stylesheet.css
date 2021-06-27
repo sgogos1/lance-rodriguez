@@ -164,6 +164,10 @@ body {
     --video-container-width: 80%;
     --background-size: auto 100%;
     --featured-container-top-margin: 15%;
+    --form-font-size: 2vmax;
+    --mailing-form-header-margin-bottom: 2.5%;
+    --mailing-list-padding-bottom: 5%;
+    --mailing-form-header-font-size: 3.25vmax;
 }
 
 .top-mobile {
@@ -186,6 +190,10 @@ body {
     --video-container-width: 60%;
     --background-size: cover;
     --featured-container-top-margin: 5%;
+    --form-font-size: 1.2vmax;
+    --mailing-form-header-margin-bottom: 1.5%;
+    --mailing-list-padding-bottom: 2%;
+    --mailing-form-header-font-size: 2.5vmax;
 }
 
 .top-desktop {
@@ -631,15 +639,15 @@ footer {
     position: relative;
     height: fit-content;
     width: 100%;
-    padding: 2% 0;
+    padding: 2vh 0;
 }
 
 #subscribe-header {
     color: white;
-    font-size: 2vmax;
+    font-size: var(--mailing-form-header-font-size);
     margin-block: 0;
     margin-top: 1%;
-    margin-bottom: 1.5%;
+    margin-bottom: var(--mailing-form-header-margin-bottom);
 }
 
 /* ----------- Mailing List --------------------------------*/
@@ -648,31 +656,31 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-bottom: 2%;
+    padding-bottom: var(--mailing-list-padding-bottom);
 }
 
-#mailing-list-form {
+.mailing-list-form {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-#mailing-list-input {
+.mailing-list-input {
     background: RGBA(255, 255, 255, 1);
     border: none;
-    font-size: 1.2vmax;
+    font-size: var(--form-font-size);
     height: 2.5vmax;
     padding: 5%;
 }
 
-#mailing-list-submit {
+.mailing-list-submit {
     color:white; 
     cursor: pointer;
     margin-left: 5%; 
-    font-size: 1.2vmax;
-    height: 2.5vmax;
-    padding: 2.5% 5%;
+    font-size: var(--form-font-size);
+    min-height: 2.5vmax;
+    padding: 1% 5%;
     background-color: RGBA(255, 255, 255, 1);
     color: black;
     text-transform: uppercase;

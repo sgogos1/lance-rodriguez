@@ -211,8 +211,9 @@ featuredWatchButton.onclick = switchVideo;
 
 /*-------------------------------------------- MAILING LIST -----------------------------------------*/
 const mailingListDiv = document.getElementById("mailing-list");
-const mailingListForm = document.getElementById("mailing-list-form");
+const mailingListForm = document.getElementsByClassName("mailing-list-form")[0];
 
-mailingListForm.onsubmit = function(){
-    mailingListForm.innerHTML = "<span style=\"color: mediumturquoise; font-weight: bold;\">Thank you for subscribing!</span>";
+mailingListForm.onsubmit = async function(){
+    await new Promise(r => setTimeout(r, 500));
+    mailingListDiv.innerHTML = "<iframe name=\"frame\" style=\"display:none\"></iframe><h2 id=\"subscribe-header\">JOIN OUR MAILING LIST</h2><span style=\"color: mediumturquoise; font-weight: bold;\">Thank you for subscribing!</span>";
 }
