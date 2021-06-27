@@ -214,5 +214,5 @@ const mailingListDiv = document.getElementById("mailing-list");
 const mailingListForm = document.getElementById("mailing-list-form");
 
 mailingListForm.onsubmit = function(){
-    mailingListForm.innerHTML = "<h2 style=\"color: white\">Thank you for subscribing!</h2>";
+    mailingListForm.innerHTML = "<span style=\"color: mediumturquoise; font-weight: bold;\">Thank you for subscribing!</span>";
 }

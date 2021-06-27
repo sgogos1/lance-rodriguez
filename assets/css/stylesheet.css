@@ -5,6 +5,7 @@
     font-family: Arial, Helvetica, sans-serif;
     scroll-behavior: smooth;
     background-color: transparent;
+    text-decoration: none;
 }
 
 :root {
@@ -320,6 +321,7 @@ body {
     display: block;
     top: var(--header-height);
     height: fit-content;
+    margin-bottom: 5%;
 }
 
 .section {
@@ -463,6 +465,10 @@ body {
     background-color: black;
 }
 
+.expand-music-arrow::before:hover {
+    background-color: white;
+}
+
 .expand-music-arrow::after {
     -webkit-transform: rotate(45deg);       
     -ms-transform: rotate(45deg);           
@@ -537,32 +543,6 @@ body {
 
 .current-video-button, .video-nav-circle:hover {
     opacity: 1;
-}
-
-/* ----------- Mailing List --------------------------------*/
-#mailing-list, #mailing-list-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#mailing-list-input {
-    background: RGBA(255, 255, 255, 0.8);
-    border: none;
-    font-size: 1.2vmax;
-    height: 2vmax;
-}
-
-#mailing-list-submit {
-    color:white; 
-    display: block; 
-    margin-top: 5%; 
-    font-size: 1vmax;
-    padding: 2.5%;
-    background-color: RGBA(255, 255, 255, 0.8);
-    color: black;
-    text-transform: uppercase;
 }
 
 /* ----------- Social Media Links --------------------------*/
@@ -644,6 +624,7 @@ body {
 /* --------------- Footer ------------------------------- */
 footer {
     background-color: black;
+    border-top: grey 1px solid;
     position: relative;
     height: fit-content;
     width: 100%;
@@ -651,6 +632,80 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 2% 0;
+}
+
+#subscribe-header {
+    color: white;
+    font-size: 2vmax;
+    margin-block: 0;
+    margin-top: 1%;
+    margin-bottom: 1.5%;
+}
+
+/* ----------- Mailing List --------------------------------*/
+#mailing-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2%;
+}
+
+#mailing-list-form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#mailing-list-input {
+    background: RGBA(255, 255, 255, 1);
+    border: none;
+    font-size: 1.2vmax;
+    height: 2.5vmax;
+    padding: 5%;
+}
+
+#mailing-list-submit {
+    color:white; 
+    cursor: pointer;
+    margin-left: 5%; 
+    font-size: 1.2vmax;
+    height: 2.5vmax;
+    padding: 2.5% 5%;
+    background-color: RGBA(255, 255, 255, 1);
+    color: black;
+    text-transform: uppercase;
+    border: none;
+}
+
+#mailing-list-submit:hover {
+    font-weight: bold;
+    background-color:mediumturquoise;
+}
+
+#footer-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-info-text {
+    display: block;
+    text-decoration: none;
+    padding-bottom: 0.5%;
+    color: white;
+}
+
+#author-link {
+    text-decoration: underline;
+    color: white;
+}
+
+#author-link:hover {
+    text-decoration: none;
+    color:mediumturquoise;
 }
 
 #footer-logo {
