@@ -55,6 +55,8 @@ body {
     margin: 0;
     padding: 0;
     border: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .pre-load {
@@ -623,14 +625,12 @@ body {
 
 /* --------------- Footer ------------------------------- */
 footer {
+    top: var(--header-height);
     background-color: black;
     border-top: grey 1px solid;
     position: relative;
     height: fit-content;
     width: 100%;
-    display: block;
-    justify-content: center;
-    align-items: center;
     padding: 2% 0;
 }
 
@@ -677,6 +677,7 @@ footer {
     color: black;
     text-transform: uppercase;
     border: none;
+    width: fit-content;
 }
 
 #mailing-list-submit:hover {
@@ -696,6 +697,7 @@ footer {
     text-decoration: none;
     padding-bottom: 0.5%;
     color: white;
+    font-size: 1vmax;
 }
 
 #author-link {
