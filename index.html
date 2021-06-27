@@ -37,7 +37,7 @@
     <main id="main">
       <div id="featured-container">
         <div id="featured-content">
-          <h2>PLANES</h2>
+          <h2 class="section-header">PLANES</h2>
           <div id="featured-content-links">
             <a href="#music" id="featured-listen"><h4 id="featured-listen-button">LISTEN</h4></a>
             <a href="#visuals"><h4 id="featured-watch-button">WATCH</h4></a>
@@ -96,8 +96,16 @@
           </div>
         </div>
       </div>
-      <div id="collaboration" class="section"></div>
-      <div id="about" class="section"></div>
+      <!-- <div id="collaboration" class="section"></div>
+      <div id="about" class="section"></div> -->
+      <div id="mailing-list" class="section">
+        <iframe name="frame" style="display:none"></iframe>
+        <h2 class="section-header">MAILING LIST</h2>
+        <form id="mailing-list-form" action="https://lancerodriguez.com/mailman/subscribe/lancerodriguez_lancerodriguez.com" method="POST" target="frame">
+          <input type="text" name="email" id="mailing-list-input" placeholder="EMAIL" value required>
+          <input type="Submit" name="email-button" id="mailing-list-submit" value="Join">
+        </form>
+      </div>
       <div id="socials-container">
         <div id="main-social-links">
           <a class="social-link" target="_blank" rel="noopener noreferrer" href="https://music.apple.com/us/artist/lance-rodriguez/1404765543">              

@@ -539,6 +539,32 @@ body {
     opacity: 1;
 }
 
+/* ----------- Mailing List --------------------------------*/
+#mailing-list, #mailing-list-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mailing-list-input {
+    background: RGBA(255, 255, 255, 0.8);
+    border: none;
+    font-size: 1.2vmax;
+    height: 2vmax;
+}
+
+#mailing-list-submit {
+    color:white; 
+    display: block; 
+    margin-top: 5%; 
+    font-size: 1vmax;
+    padding: 2.5%;
+    background-color: RGBA(255, 255, 255, 0.8);
+    color: black;
+    text-transform: uppercase;
+}
+
 /* ----------- Social Media Links --------------------------*/
 #socials-container {
     z-index: 2;

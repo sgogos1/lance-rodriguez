@@ -48,6 +48,9 @@ function pageSize(){
             logo.classList.remove("visible");
             logo.classList.add("hidden");
         }
+        else {
+            body.classList.add("nav-open-scrolled");
+        }
     }
     else{
         body.classList.add("top");
@@ -56,6 +59,9 @@ function pageSize(){
         if (!navMenu.classList.contains("nav-open")){
             logo.classList.add("visible");
             logo.classList.remove("hidden");
+        }
+        else {
+            body.classList.remove("nav-open-scrolled");
         }
     }
     if (window.innerWidth <= window.innerHeight){
@@ -201,3 +207,12 @@ function switchVideo(event){
 }
 
 featuredWatchButton.onclick = switchVideo;
+
+
+/*-------------------------------------------- MAILING LIST -----------------------------------------*/
+const mailingListDiv = document.getElementById("mailing-list");
+const mailingListForm = document.getElementById("mailing-list-form");
+
+mailingListForm.onsubmit = function(){
+    mailingListForm.innerHTML = "<h2 style=\"color: white\">Thank you for subscribing!</h2>";
+}
