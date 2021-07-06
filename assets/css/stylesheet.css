@@ -770,7 +770,7 @@ footer {
     width: fit-content;
 }
 
-#mailing-list-submit:hover {
+.mailing-list-submit:hover {
     font-weight: bold;
     background-color:mediumturquoise;
 }
