@@ -100,7 +100,7 @@ window.onresize = pageSize;
 const navButton = document.getElementById("nav-button");
 const navMenu = document.getElementById("nav-menu");
 const navElements = document.getElementsByClassName("nav-element");
-const navMenuLinks = [document.getElementById("music-nav"), document.getElementById("visuals-nav")];
+const navMenuLinks = [document.getElementById("music-nav"), document.getElementById("visuals-nav"), document.getElementById("events-nav")];
 // , document.getElementById("collaboration-nav"), document.getElementById("about-nav")
 
 navButton.onclick = function(){
