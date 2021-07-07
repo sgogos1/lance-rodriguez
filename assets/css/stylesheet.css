@@ -389,16 +389,23 @@ body {
     align-items: center;
 }
 
-.featured-show-subheader {
-    font-size: 4vmax;
+.featured-show-time {
+    font-size: 3vmax;
     font-weight: normal;
     margin-block: 0;
+    margin-bottom: 10%;
 }
 
-.featured-show-header {
+.featured-show-location {
     font-size: 7vmax;
     margin-block: 0;
-    margin: 2% 0;
+    margin: 0;
+}
+
+.featured-show-city {
+    font-size: 2vmax;
+    font-weight: normal;
+    margin-block: 0;
 }
 
 .featured-show-tickets {
