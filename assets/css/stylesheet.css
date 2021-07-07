@@ -405,6 +405,7 @@ body {
     font-size: 2.5vmax;
     border: black solid 0.35vmax;
     color: black;
+    min-width: fit-content;
     width: fit-content;
     padding: 3% 6%;
     transition: all .25s;
