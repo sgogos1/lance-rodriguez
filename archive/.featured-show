@@ -1,0 +1,63 @@
+<div id="featured-show">
+    <h5 class="featured-show-city">Los Angeles, CA</h5>
+    <h2 class="featured-show-location">RESIDENT</h2>
+    <h3 class="featured-show-time">JULY 15TH - 7PM</h3>
+    <a target="_blank" rel="noopener noreferrer" href="https://www.eventbrite.com/e/breaking-sound-la-feat-ashrr-jack-shields-cj-may-lance-rodriguez-more-tickets-156029306857?ref=eios"><h4 class="featured-show-tickets">TICKETS</h4></a>
+</div>
+
+.mobile
+    --featured-show-top-padding: 25%;
+
+.desktop
+    --featured-show-top-padding: 5%;
+
+
+#featured-show {
+    padding-top: var(--featured-show-top-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-show-time {
+    font-size: 3vmax;
+    font-weight: normal;
+    margin-block: 0;
+    margin-bottom: 10%;
+}
+
+.featured-show-location {
+    font-size: 7vmax;
+    margin-block: 0;
+    margin: 0;
+}
+
+.featured-show-city {
+    font-size: 2vmax;
+    font-weight: normal;
+    margin-block: 0;
+}
+
+.featured-show-tickets {
+    font-size: 2.5vmax;
+    border: black solid 0.35vmax;
+    color: black;
+    min-width: fit-content;
+    min-width: -moz-fit-content;
+    width: fit-content;
+    width: -moz-fit-content;
+    padding: 4% 8%;
+    transition: all .25s;
+    margin-block: 0;
+    margin-top: 3%;
+    background-color: RGBA(255, 255, 255, 0.1);
+    font-weight: normal;
+}
+
+.featured-show-tickets:hover {
+    border-radius: 20px;
+    color: white;
+    border-color: white;
+    cursor: pointer;
+}

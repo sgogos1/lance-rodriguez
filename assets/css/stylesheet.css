@@ -172,7 +172,6 @@ body {
     --calendar-data-header-font-size: 2vmax;
     --calendar-data-subheader-font-size: 1.4vmax;
     --calendar-tickets-font-size: 1.4vmax;
-    --featured-show-top-padding: 25%;
 }
 
 .top-mobile {
@@ -203,7 +202,6 @@ body {
     --calendar-data-header-font-size: 1.5vmax;
     --calendar-data-subheader-font-size: 0.9vmax;
     --calendar-tickets-font-size: 1.2vmax;
-    --featured-show-top-padding: 5%;
 }
 
 .top-desktop {
@@ -385,56 +383,6 @@ body {
     text-align: center;
 }
 
-#featured-show {
-    padding-top: var(--featured-show-top-padding);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.featured-show-time {
-    font-size: 3vmax;
-    font-weight: normal;
-    margin-block: 0;
-    margin-bottom: 10%;
-}
-
-.featured-show-location {
-    font-size: 7vmax;
-    margin-block: 0;
-    margin: 0;
-}
-
-.featured-show-city {
-    font-size: 2vmax;
-    font-weight: normal;
-    margin-block: 0;
-}
-
-.featured-show-tickets {
-    font-size: 2.5vmax;
-    border: black solid 0.35vmax;
-    color: black;
-    min-width: fit-content;
-    min-width: -moz-fit-content;
-    width: fit-content;
-    width: -moz-fit-content;
-    padding: 4% 8%;
-    transition: all .25s;
-    margin-block: 0;
-    margin-top: 3%;
-    background-color: RGBA(255, 255, 255, 0.1);
-    font-weight: normal;
-}
-
-.featured-show-tickets:hover {
-    border-radius: 20px;
-    color: white;
-    border-color: white;
-    cursor: pointer;
-}
-
 #featured-content {
     margin-top: var(--featured-container-top-margin);
     width: fit-content;
@@ -450,7 +398,7 @@ body {
     margin-bottom: 1vh;
     font-weight: normal;
     letter-spacing: 0.6vmax;
-    color: white;
+    color: black;
 }
 
 #featured-content a {
@@ -460,14 +408,16 @@ body {
     margin-right: 5%;
     margin-left: 5%;
     padding: 2% 5%;
-    border: white solid 0.35vmax;
-    color: white;
+    border: black solid 0.35vmax;
+    color: black;
     transition: all .25s;
 }
 
 #featured-content a:hover {
     border-radius: 20px;
     background-color: RGBA(255, 255, 255, 0.4);
+    border-color: white;
+    color: white;
 }
 
 #featured-content h4 {
