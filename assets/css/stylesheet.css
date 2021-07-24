@@ -633,13 +633,8 @@ body {
 }
 
 .location-name a {
-    text-decoration: none;
     color: black;
     white-space: nowrap;
-}
-
-.location-name a:hover {
-    text-decoration: underline;
 }
 
 .time, .location-address {
@@ -661,6 +656,14 @@ body {
 
 .calendar-tickets a:hover {
     text-decoration: underline;
+}
+
+.future-event:hover {
+    text-decoration: underline;
+}
+
+.past-event {
+    text-decoration: line-through;
 }
 
 /* ----------- Social Media Links --------------------------*/
