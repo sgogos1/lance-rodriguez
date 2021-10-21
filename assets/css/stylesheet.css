@@ -172,6 +172,7 @@ body {
     --calendar-data-header-font-size: 2vmax;
     --calendar-data-subheader-font-size: 1.4vmax;
     --calendar-tickets-font-size: 1.4vmax;
+    --featured-show-top-padding: 25%;
 }
 
 .top-mobile {
@@ -202,6 +203,7 @@ body {
     --calendar-data-header-font-size: 1.5vmax;
     --calendar-data-subheader-font-size: 0.9vmax;
     --calendar-tickets-font-size: 1.2vmax;
+    --featured-show-top-padding: 5%;
 }
 
 .top-desktop {
@@ -393,7 +395,7 @@ body {
 }
 
 #featured-content h2 {
-    font-size: 6vmax;
+    font-size: 5vmax;
     margin-top: 0;
     margin-bottom: 1vh;
     font-weight: normal;
@@ -435,6 +437,33 @@ body {
     width: 100%;
     height: fit-content;
     height: -moz-fit-content;
+}
+
+#featured-show {
+    padding-top: var(--featured-show-top-padding);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.featured-show-time {
+    font-size: 2.75vmax;
+    font-weight: normal;
+    margin-block: 0;
+    margin-bottom: 20%;
+}
+
+.featured-show-location {
+    font-size: 4vmax;
+    margin-block: 0;
+    margin: 2vh 0 2vh 0;
+}
+
+.featured-show-city {
+    font-size: 2vmax;
+    font-weight: normal;
+    margin-block: 0;
 }
 
 /* ---------- Discography/Music ----------------------------*/
@@ -637,6 +666,10 @@ body {
     white-space: nowrap;
 }
 
+.location-name a:hover {
+    color:rgb(63, 56, 56);
+}
+
 .time, .location-address {
     text-transform: capitalize;
     margin-block: 0;
@@ -647,6 +680,7 @@ body {
 
 .calendar-tickets {
     text-align: center;
+    padding: 2%;
 }
 
 .calendar-tickets a {
@@ -654,7 +688,7 @@ body {
     font-size: var(--calendar-tickets-font-size);
 }
 
-.calendar-tickets a:hover {
+.calendar-tickets:hover {
     text-decoration: underline;
 }
 
