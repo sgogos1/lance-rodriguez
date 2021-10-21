@@ -7,7 +7,7 @@ const logo = document.getElementById("logo");
 window.onload = function(){
     pageSize();
 
-    featuredListen.onclick = musicPlayerExpanded;
+    // featuredListen.onclick = musicPlayerExpanded;
     
     for (let i = 0; i < musicArrows.length; i++){
         musicImages[i].onclick = musicPlayerExpanded;
@@ -206,7 +206,7 @@ function switchVideo(event){
     }
 }
 
-featuredWatchButton.onclick = switchVideo;
+// featuredWatchButton.onclick = switchVideo;
 
 
 /*-------------------------------------------- MAILING LIST -----------------------------------------*/
