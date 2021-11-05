@@ -24,7 +24,7 @@ window.onload = function(){
 async function loadingFinished(){
 
     for (let i = 0; i < 2; i++){
-        document.getElementById("loading-logo").style.setProperty("filter", 'var(--light-blue-filter)');
+        document.getElementById("loading-logo").style.setProperty("filter", 'var(--red-filter)');
         await new Promise(r => setTimeout(r, 250));
         document.getElementById("loading-logo").style.setProperty("filter", 'var(--white-filter)');
         await new Promise(r => setTimeout(r, 250));
