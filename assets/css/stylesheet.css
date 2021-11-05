@@ -9,6 +9,7 @@
 }
 
 :root {
+    --loading-logo-height: 10.5vh;
     --light-tan: rgb(247, 236, 223);
     --dark-grey: rgb(63, 56, 56);
     --tan: tan;
@@ -61,10 +62,11 @@ body {
 
 .pre-load {
     overflow: hidden;
+    /* --opacity: 0.0; */
 }
 
 #background {
-    background-image: url('/assets/images/lance/lance-ocean-centered-1-blurred.webp');
+    background-image: url('/assets/images/lance/lance-too-far-gone.jpg');
     background-position: center center;
     background-size: cover;
     position: fixed;
@@ -87,8 +89,9 @@ body {
 .loaded-wrapper {
     visibility: hidden;
     opacity: 0;
-    -webkit-transition: all 2s ease-out;
-    transition: all 2s ease-out;
+    transform: translateY(-45%);
+    -webkit-transition: all 3s ease-out;
+    transition: all 3s ease-out;
 }
 
 #loader {
@@ -100,7 +103,8 @@ body {
 }
 
 #loading-logo {
-    height: 15vh;
+    opacity: var(--loading-logo-opacity);
+    height: var(--loading-logo-height);
     width: fit-content;
     filter: var(--white-filter);
     transition: filter 0.25s;
@@ -108,12 +112,16 @@ body {
 
 /*______________________________ Header __________________________________*/
 #header{
-    z-index: 5;
+    z-index: 4;
     position: fixed;
     width: 100%;
     color: var(--header-text-color);
     opacity: var(--opacity);
     background-color: var(--header-background-color);
+}
+
+#header:hover {
+    opacity: 1;
 }
 
 .header-top {
@@ -131,11 +139,11 @@ body {
 
 .top {
     --header-background-color: transparent;
-    --header-text-color: var(--black);
-    --header-text-hover: var(--dark-grey);
-    --header-logo-color: var(--black-filter);
-    --header-logo-hover: var(--dark-grey-filter);
-    --social-links-color: var(--black-filter);
+    --header-text-color: var(--white);
+    --header-text-hover: grey;
+    --header-logo-color: var(--white-filter);
+    --header-logo-hover: var(--apple-grey-filter);
+    --social-links-color: var(--white-filter);
     --tidal-filter: var(--offwhite-filter);
     --nav-button-width: 0.15rem;
     --nav-button-height: 100%;
@@ -143,11 +151,11 @@ body {
 }
 
 .scrolled {
-    --header-text-color: var(--black);
-    --header-text-hover: var(--dark-grey);
-    --header-logo-color: var(--black-filter);
-    --header-logo-hover: var(--dark-grey-filter);
-    --social-links-color: var(--dark-grey-filter);
+    --header-text-color: white;
+    --header-text-hover: grey;
+    --header-logo-color: var(--white-filter);
+    --header-logo-hover: var(--apple-grey-filter);
+    --social-links-color: var(--white-filter);
     --tidal-filter: var(--offwhite-filter);
     --nav-button-width: 0.12rem;
     --nav-button-height: 80%;
@@ -173,6 +181,7 @@ body {
     --calendar-data-subheader-font-size: 1.4vmax;
     --calendar-tickets-font-size: 1.4vmax;
     --featured-show-top-padding: 25%;
+    --loading-logo-opacity: 1;
 }
 
 .top-mobile {
@@ -204,6 +213,7 @@ body {
     --calendar-data-subheader-font-size: 0.9vmax;
     --calendar-tickets-font-size: 1.2vmax;
     --featured-show-top-padding: 5%;
+    --loading-logo-opacity: 1;
 }
 
 .top-desktop {
@@ -218,7 +228,7 @@ body {
 }
 
 .nav-open-scrolled {
-    --header-background-color: white;
+    --header-background-color: black;
 }
 
 /* ----------- Header Logo --------------------------*/
@@ -368,13 +378,14 @@ body {
     margin-top: 2vmax;
     margin-bottom: 2vmax;
     display: inline-block;
+    color: white;
 }
 
 /*------------ Featured Content ----------------------------*/
 #featured-container {
     z-index: 1;
     padding-top: 4vh;
-    min-height: 87.1vh;
+    min-height: 87.3vh;
     width: 100%;
     height: fit-content;
     height: -moz-fit-content;
@@ -398,21 +409,22 @@ body {
     font-size: 5vmax;
     margin-top: 0;
     margin-bottom: 1vh;
-    font-weight: normal;
+    font-weight: bold;
     letter-spacing: 0.6vmax;
-    color: black;
+    color: white;
 }
 
 #featured-content a {
     min-width: fit-content;
     min-width: -moz-fit-content;
+    min-height: fit-content;
+    min-height: -moz-fit-content;
     text-decoration: none;
-    margin-right: 5%;
-    margin-left: 5%;
-    padding: 2% 5%;
-    border: black solid 0.35vmax;
-    color: black;
+    border: white solid 0.35vmax;
+    padding: 3% 5%;
+    color: white;
     transition: all .25s;
+    white-space: nowrap;
 }
 
 #featured-content a:hover {
@@ -420,6 +432,7 @@ body {
     background-color: RGBA(255, 255, 255, 0.4);
     border-color: white;
     color: white;
+    white-space: nowrap;
 }
 
 #featured-content h4 {
@@ -448,6 +461,7 @@ body {
 }
 
 .featured-show-time {
+    color: white;
     font-size: 2.75vmax;
     font-weight: normal;
     margin-block: 0;
@@ -455,15 +469,18 @@ body {
 }
 
 .featured-show-location {
+    color: white;
     font-size: 4vmax;
     margin-block: 0;
     margin: 2vh 0 2vh 0;
 }
 
 .featured-show-city {
+    color: white;
     font-size: 2vmax;
     font-weight: normal;
     margin-block: 0;
+    margin-bottom: 4%;
 }
 
 /* ---------- Discography/Music ----------------------------*/
@@ -515,13 +532,14 @@ body {
     content: "";
     width: 0.2rem;
     height: 25%;
+    color: white;
 }
 
 .expand-music-arrow::before {
     -webkit-transform: rotate(-45deg);       
     -ms-transform: rotate(-45deg);           
     transform: rotate(-45deg);
-    background-color: black;
+    background-color: white;
 }
 
 .expand-music-arrow::before:hover {
@@ -532,7 +550,7 @@ body {
     -webkit-transform: rotate(45deg);       
     -ms-transform: rotate(45deg);           
     transform: rotate(45deg);   
-    background-color: black;
+    background-color: white;
 }
 
 .music-expanded.expand-music-arrow::before {
@@ -655,6 +673,7 @@ body {
 
 .date, .location-name {
     text-transform: uppercase;
+    color: white;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-block: 0;
     font-size: var(--calendar-data-header-font-size);
@@ -662,7 +681,7 @@ body {
 }
 
 .location-name a {
-    color: black;
+    color: white;
     white-space: nowrap;
 }
 
@@ -671,6 +690,7 @@ body {
 }
 
 .time, .location-address {
+    color: white;
     text-transform: capitalize;
     margin-block: 0;
     margin-top: 0.25vh;
@@ -679,16 +699,18 @@ body {
 }
 
 .calendar-tickets {
+    color: white;
     text-align: center;
     padding: 2%;
 }
 
 .calendar-tickets a {
-    color: black;
+    color: white;
     font-size: var(--calendar-tickets-font-size);
 }
 
-.calendar-tickets:hover {
+.calendar-tickets a:hover {
+    color: rgb(63, 56, 56);
     text-decoration: underline;
 }
 
@@ -841,7 +863,9 @@ footer {
 
 .mailing-list-submit:hover {
     font-weight: bold;
-    background-color:mediumturquoise;
+    background-color:red;
+    color: white;
+    border: white 3px solid;
 }
 
 #footer-info {
@@ -866,7 +890,7 @@ footer {
 
 #author-link:hover {
     text-decoration: none;
-    color:mediumturquoise;
+    color:red;
 }
 
 #footer-logo {
