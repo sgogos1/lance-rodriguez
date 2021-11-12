@@ -149,9 +149,9 @@ function navLinkClicked(event){
 
 /*-------------------------------------- DISCOGRAPHY ---------------------------------------------------------------*/
 const featuredListen = document.getElementById("featured-listen");
-const musicImages = [document.getElementById("planes-image"), document.getElementById("tts-image"), document.getElementById("ao-image"), document.getElementById("f-image"), document.getElementById("h-image"), document.getElementById("p-image")];
-const musicArrows = [document.getElementById("planes-arrow"), document.getElementById("tts-arrow"), document.getElementById("ao-arrow"), document.getElementById("f-arrow"), document.getElementById("h-arrow"), document.getElementById("p-arrow")];
-const musicPlayers = [document.getElementById("planes-music"), document.getElementById("tts-music"), document.getElementById("ao-music"), document.getElementById("f-music"), document.getElementById("h-music"), document.getElementById("p-music")];
+const musicImages = [document.getElementById("tfg-image"), document.getElementById("planes-image"), document.getElementById("tts-image"), document.getElementById("ao-image"), document.getElementById("f-image"), document.getElementById("h-image")];
+const musicArrows = [document.getElementById("tfg-arrow"), document.getElementById("planes-arrow"), document.getElementById("tts-arrow"), document.getElementById("ao-arrow"), document.getElementById("f-arrow"), document.getElementById("h-arrow")];
+const musicPlayers = [document.getElementById("tfg-music"), document.getElementById("planes-music"), document.getElementById("tts-music"), document.getElementById("ao-music"), document.getElementById("f-music"), document.getElementById("h-music")];
 
 function musicPlayerExpanded(event){
     let arrowClicked = event.target.id;

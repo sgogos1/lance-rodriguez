@@ -477,7 +477,7 @@ body {
 
 .featured-show-city {
     color: white;
-    font-size: 2vmax;
+    font-size: 3vmax;
     font-weight: normal;
     margin-block: 0;
     margin-bottom: 4%;
@@ -512,6 +512,7 @@ body {
 
 .music-player {
     transition: height 0.2s;
+    background: black;
 }
 
 .expand-music-arrow {
