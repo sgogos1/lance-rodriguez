@@ -118,6 +118,7 @@ body {
     color: var(--header-text-color);
     opacity: var(--opacity);
     background-color: var(--header-background-color);
+    border-bottom: var(--header-border);
 }
 
 #header:hover {
@@ -229,6 +230,7 @@ body {
 
 .nav-open-scrolled {
     --header-background-color: black;
+    --header-border: grey 1px solid;
 }
 
 /* ----------- Header Logo --------------------------*/
@@ -407,7 +409,7 @@ body {
 
 #featured-content h2 {
     font-size: 5vmax;
-    margin-top: 0;
+    margin-top: 1vh;
     margin-bottom: 1vh;
     font-weight: bold;
     letter-spacing: 0.6vmax;
@@ -532,7 +534,7 @@ body {
     margin-top: 1%;
     content: "";
     width: 0.2rem;
-    height: 25%;
+    height: 22.5%;
     color: white;
 }
 
