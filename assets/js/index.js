@@ -177,7 +177,7 @@ function musicPlayerExpanded(event){
 }
 
 /*------------------------------------------- VISUALS -----------------------------------------------*/
-const videoButtons = [document.getElementById("bts-sw-video-button"), document.getElementById("planes-video-button"), document.getElementById('tts-video-button'), document.getElementById('ws-video-button')];
+const videoButtons = [document.getElementById("tfg-video-button"), document.getElementById("bts-sw-video-button"), document.getElementById("planes-video-button"), document.getElementById('tts-video-button'), document.getElementById('ws-video-button')];
 const featuredWatchButton = document.getElementById("featured-watch-button");
 
 function switchVideo(event){
