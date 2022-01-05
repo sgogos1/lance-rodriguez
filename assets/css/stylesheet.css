@@ -691,6 +691,7 @@ body {
 
 .location-name a:hover {
     color:rgb(63, 56, 56);
+    text-decoration: none;
 }
 
 .time, .location-address {
@@ -715,7 +716,7 @@ body {
 
 .calendar-tickets a:hover {
     color: rgb(63, 56, 56);
-    text-decoration: underline;
+    font-weight: bolder;
 }
 
 .future-event:hover {
@@ -723,7 +724,7 @@ body {
 }
 
 .past-event {
-    text-decoration: line-through;
+    text-decoration: line-through 6px;
 }
 
 /* ----------- Social Media Links --------------------------*/
