@@ -166,13 +166,15 @@ body {
 .mobile {
     --nav-menu-link-padding: 0 2.25% 0.25% 2.25%;
     --nav-menu-font-size: 1.4vmax;
-    --featured-header-size: 5vmax;
+    --featured-show-time-font-size: 4.25vmax;
+    --featured-header-size: 10vmax;
+    --featured-link-font-size: 4vmax;
     --content-width: 80%;
     --album-image-width: 70%;
     --album-image-margin: 15%;
     --video-container-width: 80%;
     --background-size: auto 100%;
-    --featured-container-top-margin: 15%;
+    --featured-container-top-margin: 25%;
     --form-font-size: 2vmax;
     --mailing-form-header-margin-bottom: 2.5%;
     --mailing-list-padding-bottom: 5%;
@@ -183,6 +185,7 @@ body {
     --calendar-tickets-font-size: 1.4vmax;
     --featured-show-top-padding: 25%;
     --loading-logo-opacity: 1;
+    --social-links-height: 3.25vmax;
 }
 
 .top-mobile {
@@ -198,13 +201,15 @@ body {
 .desktop {
     --nav-menu-link-padding: 0% 5% 0.5% 5%;
     --nav-menu-font-size: 1vmax;
-    --featured-header-size: 3vmax;
+    --featured-show-time-font-size: 3.25vmax;
+    --featured-header-size: 7vmax;
+    --featured-link-font-size: 3vmax;
     --content-width: 80%;
     --album-image-width: 27.5%;
     --album-image-margin: 2.9166666667%;
     --video-container-width: 60%;
     --background-size: cover;
-    --featured-container-top-margin: 5%;
+    --featured-container-top-margin: 12.5%;
     --form-font-size: 1.2vmax;
     --mailing-form-header-margin-bottom: 1.5%;
     --mailing-list-padding-bottom: 2%;
@@ -215,6 +220,7 @@ body {
     --calendar-tickets-font-size: 1.2vmax;
     --featured-show-top-padding: 5%;
     --loading-logo-opacity: 1;
+    --social-links-height: 2.15vmax;
 }
 
 .top-desktop {
@@ -408,7 +414,7 @@ body {
 }
 
 #featured-content h2 {
-    font-size: 5vmax;
+    font-size: var(--featured-header-size);
     margin-top: 1vh;
     margin-bottom: 1vh;
     font-weight: bold;
@@ -441,7 +447,7 @@ body {
 
 #featured-content h4 {
     cursor: pointer;
-    font-size: 2.25vmax;
+    font-size: var(--featured-link-font-size);
     margin-top: 0;
     margin-bottom: 0;
     font-weight: normal;
@@ -466,7 +472,7 @@ body {
 
 .featured-show-time {
     color: white;
-    font-size: 2.75vmax;
+    font-size: var(--featured-show-time-font-size);
     font-weight: normal;
     margin-block: 0;
     margin-bottom: 1%;
@@ -725,7 +731,7 @@ body {
 }
 
 .past-event {
-    text-decoration: line-through 6px;
+    text-decoration: line-through 0.5vmax;
 }
 
 /* ----------- Social Media Links --------------------------*/
@@ -768,7 +774,7 @@ body {
 }
 
 .social-img {
-    height: 2.15vmax;
+    height: var(--social-links-height);
     filter: var(--social-links-color);
 }
 
