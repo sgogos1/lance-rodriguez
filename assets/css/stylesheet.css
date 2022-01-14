@@ -165,10 +165,10 @@ body {
 
 .mobile {
     --nav-menu-link-padding: 0 2.25% 0.25% 2.25%;
-    --nav-menu-font-size: 1.4vmax;
+    --nav-menu-font-size: 2.25vmax;
     --featured-show-time-font-size: 4.25vmax;
     --featured-header-size: 10vmax;
-    --featured-link-font-size: 4vmax;
+    --featured-link-font-size: 3.5vmax;
     --content-width: 80%;
     --album-image-width: 70%;
     --album-image-margin: 15%;
@@ -203,13 +203,13 @@ body {
     --nav-menu-font-size: 1vmax;
     --featured-show-time-font-size: 3.25vmax;
     --featured-header-size: 7vmax;
-    --featured-link-font-size: 3vmax;
+    --featured-link-font-size: 2.5vmax;
     --content-width: 80%;
     --album-image-width: 27.5%;
     --album-image-margin: 2.9166666667%;
     --video-container-width: 60%;
     --background-size: cover;
-    --featured-container-top-margin: 12.5%;
+    --featured-container-top-margin: 7.5%;
     --form-font-size: 1.2vmax;
     --mailing-form-header-margin-bottom: 1.5%;
     --mailing-list-padding-bottom: 2%;
@@ -428,8 +428,8 @@ body {
     min-height: fit-content;
     min-height: -moz-fit-content;
     text-decoration: none;
-    border: white solid 0.35vmax;
-    padding: 2% 4%;
+    border: white solid 0.45vmax;
+    padding: 2% 3%;
     margin: 1% 2%;
     color: white;
     transition: all .25s;
@@ -442,7 +442,6 @@ body {
     border-color: white;
     color: white;
     white-space: nowrap;
-    padding: 2% 8%;
 }
 
 #featured-content h4 {
