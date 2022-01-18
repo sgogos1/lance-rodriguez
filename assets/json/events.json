@@ -1,0 +1,36 @@
+{
+    "events": [
+        {
+            "date": "07.15.21",
+            "time": "5:00PM",
+            "locationName": "RESIDENT",
+            "locationLink": "https://www.residentdtla.com",
+            "locationAddress": "428 S Hewitt, Los Angeles, CA",
+            "ticketLink": "https://www.eventbrite.com/e/breaking-sound-la-feat-ashrr-jack-shields-cj-may-lance-rodriguez-more-tickets-156029306857?ref=eios"
+        },
+        {
+            "date": "08.22.21",
+            "time": "5:00PM",
+            "locationName": "MONIKER COCKTAIL",
+            "locationLink": "https://www.libertystation.com/go/moniker-general",
+            "locationAddress": "2860 Sims Road, San Diego, CA",
+            "ticketLink": ""
+        },
+        {
+            "date": "12.17.21",
+            "time": "7:00PM",
+            "locationName": "MONIKER COCKTAIL",
+            "locationLink": "https://www.libertystation.com/go/moniker-general",
+            "locationAddress": "2860 Sims Road, San Diego, CA",
+            "ticketLink": ""
+        },
+        {
+            "date": "01.26.22",
+            "time": "7:00PM",
+            "locationName": "SODA BAR",
+            "locationLink": "https://sodabarmusic.com",
+            "locationAddress": "3615 El Cajon Blvd, San Diego, CA",
+            "ticketLink": "https://link.dice.fm/qxvjQWtrymb"
+        }
+    ]
+}
