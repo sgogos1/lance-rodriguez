@@ -13,9 +13,9 @@ function generateDiscography(){
             html +=
             `<div class="album-container">
                 <img id="${id}-image" class="album" src="${song.image}" title="${song.title}" alt="${song.title}" />
-                <iframe id="${id}-music" class="music-player" src="${song.source}" width="100%" height="0" style="border: none" allow="encrypted-media" title="${song.title}"></iframe>
+                <iframe id="${id}-music" class="music-player" src="${song.source}" width="100%" height="0" allow="encrypted-media" title="${song.title}"></iframe>
                 <div id="${id}-arrow" class="expand-music-arrow"></div>
-                </div>`
+            </div>`
 
             clickableElements.push(`${id}-image`);
             clickableElements.push(`${id}-arrow`);

@@ -159,10 +159,12 @@ async function musicPlayerExpanded(event){
 
     if (musicPlayer.getAttribute("height") === "0"){
         musicPlayer.setAttribute("height", "80px");
+        musicPlayer.style.setProperty("border-top", "0.01px darkslategray solid");
         document.getElementById(itemClicked).classList.add("music-expanded");
     }
     else{
         musicPlayer.setAttribute("height", "0");
+        musicPlayer.style.setProperty("border-top", "none");
         document.getElementById(itemClicked).classList.remove("music-expanded");
     }
 }
