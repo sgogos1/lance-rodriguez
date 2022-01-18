@@ -1,0 +1,40 @@
+{
+    "songs": [
+        {
+            "id": "tides",
+            "title": "Lance Rodriguez - Tides",
+            "image": "assets/images/albums/tides.webp",
+            "source": "https://open.spotify.com/embed/album/3XN2Iv0aTn1MNX88jOG0tL"
+        },
+        {
+            "id": "too_far_gone",
+            "title": "Lance Rodriguez - Too Far Gone",
+            "image": "assets/images/albums/too-far-gone.webp",
+            "source": "https://open.spotify.com/embed/track/5lbXcajzIdJQDlMoxluAQB"
+        },
+        {
+            "id": "planes",
+            "title": "Lance Rodriguez - Planes",
+            "image": "assets/images/albums/planes/planes.webp",
+            "source": "https://open.spotify.com/embed/album/4kBrJ4XFPBIQuxfNn8JiY6"
+        },
+        {
+            "id": "trying_to_say",
+            "title": "Lance Rodriguez - Trying To Say",
+            "image": "assets/images/albums/trying-to-say.webp",
+            "source": "https://open.spotify.com/embed/album/6nHAKbse2VYQeWxlottMgH"
+        },
+        {
+            "id": "a_okay",
+            "title": "Lance Rodriguez - A-Okay",
+            "image": "assets/images/albums/a-okay.webp",
+            "source": "https://open.spotify.com/embed/album/6fVNfJaVRpa8O5eAk8tcOe"
+        },
+        {
+            "id": "freestyle",
+            "title": "Lance Rodriguez - Freestyle",
+            "image": "assets/images/albums/freestyle.webp",
+            "source": "https://open.spotify.com/embed/album/76tVblW5waRlTRXAZvQ66V"
+        }
+    ]
+}

@@ -1,24 +1,23 @@
+import { generateDiscography } from "./songs.js";
+import { generateCalendar } from "./events.js";
 /*-------------------------------------- GENERAL PAGE FORMAT ---------------------------------------------------------------*/
 const body = document.body;
 const header = document.getElementById("header");
-const headerTop = document.getElementsByClassName("header-top")[0];
 const logo = document.getElementById("logo");
 
 window.onload = function(){
     pageSize();
-
-    // featuredListen.onclick = musicPlayerExpanded;
     
-    for (let i = 0; i < musicArrows.length; i++){
-        musicImages[i].onclick = musicPlayerExpanded;
-        musicArrows[i].onclick = musicPlayerExpanded;
-    }
+    const discography = generateDiscography();
+
+    document.getElementById("music-container").innerHTML = discography.html;
+    discography.clickableElements.forEach(value => {document.getElementById(value).onclick = musicPlayerExpanded});
+
+    document.getElementById("calendar-body").innerHTML = generateCalendar();
 
     for (let i = 0; i < videoButtons.length; i++){
         videoButtons[i].onclick = switchVideo;
     }
-
-    generateCalendar();
 
     loadingFinished();
 }
@@ -103,7 +102,6 @@ const navButton = document.getElementById("nav-button");
 const navMenu = document.getElementById("nav-menu");
 const navElements = document.getElementsByClassName("nav-element");
 const navMenuLinks = [document.getElementById("music-nav"), document.getElementById("visuals-nav"), document.getElementById("events-nav")];
-// , document.getElementById("collaboration-nav"), document.getElementById("about-nav")
 
 navButton.onclick = function(){
     if (!navButton.classList.contains("open")){
@@ -150,46 +148,34 @@ function navLinkClicked(event){
 }
 
 /*-------------------------------------- DISCOGRAPHY ---------------------------------------------------------------*/
-const featuredListen = document.getElementById("featured-listen");
-const musicImages = [document.getElementById("tides-image"), document.getElementById("tfg-image"), document.getElementById("planes-image"), document.getElementById("tts-image"), document.getElementById("ao-image"), document.getElementById("f-image")];
-const musicArrows = [document.getElementById("tides-arrow"), document.getElementById("tfg-arrow"), document.getElementById("planes-arrow"), document.getElementById("tts-arrow"), document.getElementById("ao-arrow"), document.getElementById("f-arrow")];
-const musicPlayers = [document.getElementById("tides-music"), document.getElementById("tfg-music"), document.getElementById("planes-music"), document.getElementById("tts-music"), document.getElementById("ao-music"), document.getElementById("f-music")];
+async function musicPlayerExpanded(event){
+    let itemClicked = event.target.id;
 
-function musicPlayerExpanded(event){
-    let arrowClicked = event.target.id;
-    let musicPlayer;
-
-    if (arrowClicked === "featured-listen-button"){
-        arrowClicked = "planes-arrow";
-    }
-    else if (!arrowClicked.includes('arrow')){
-        arrowClicked = arrowClicked.split("-")[0] + "-arrow";
+    if (!itemClicked.includes('arrow')){
+        itemClicked = itemClicked.split("-")[0] + "-arrow";
     }
     
-    musicPlayer = document.getElementById(`${arrowClicked.split("-")[0]}-music`);
+    const musicPlayer = document.getElementById(`${itemClicked.split("-")[0]}-music`);
 
     if (musicPlayer.getAttribute("height") === "0"){
         musicPlayer.setAttribute("height", "80px");
-        document.getElementById(arrowClicked).classList.add("music-expanded");
+        document.getElementById(itemClicked).classList.add("music-expanded");
     }
     else{
         musicPlayer.setAttribute("height", "0");
-        document.getElementById(arrowClicked).classList.remove("music-expanded");
+        document.getElementById(itemClicked).classList.remove("music-expanded");
     }
 }
 
 /*------------------------------------------- VISUALS -----------------------------------------------*/
 const videoButtons = [document.getElementById("tfg-video-button"), document.getElementById("bts-sw-video-button"), document.getElementById("planes-video-button"), document.getElementById('tts-video-button'), document.getElementById('ws-video-button')];
-const featuredWatchButton = document.getElementById("featured-watch-button");
+// const featuredWatchButton = document.getElementById("featured-watch-button");
 
 function switchVideo(event){
 
-    for (let i = 0; i < videoButtons.length; i++){
-        videoButtons[i].classList.remove("current-video-button");
-    }
+    videoButtons.forEach(value => {value.classList.remove("current-video-button")});
 
     let selectedButton;
-
     event.target.id === 'featured-watch-button' ? selectedButton = videoButtons[0] : selectedButton = document.getElementById(event.target.id);
     selectedButton.classList.add("current-video-button");
     
@@ -209,53 +195,6 @@ function switchVideo(event){
 }
 
 // featuredWatchButton.onclick = switchVideo;
-/*---------------------------------------------- EVENTS ---------------------------------------------*/
-const calendarBody = document.getElementById("calendar-body");
-
-async function generateCalendar(){
-    fetch('assets/json/events.json')
-    .then(response => response.json())
-    .then(obj => {
-        const eventsJson = obj.events;
-
-        if (eventsJson && eventsJson.length > 0){
-
-            const currentTime = new Date();
-            const currentYearTwoDigits = Number(currentTime.getFullYear().toString().slice(2, 4));
-
-            for (let i = 0; i < eventsJson.length; i++) {
-                const event = eventsJson[i];
-                const date = event.date
-                const time = event.time
-
-                let pastEvent = false
-                if ((currentYearTwoDigits > Number(date.slice(6, 8)))
-                || (currentTime.getMonth()+1 >= Number(date.slice(0, 2)) && currentTime.getDate() > Number(date.slice(3, 5)))
-                || (currentTime.getMonth()+1 === Number(date.slice(0, 2)) && currentTime.getDate() === Number(date.slice(3, 5)) && currentTime.getHours() >= Number(time.slice(0, 2)) && currentTime.getMinutes() >= Number(time.slice(3, 5)))){
-                    pastEvent = true
-                }
-
-                calendarBody.innerHTML += 
-                `<tr class="calendar-element">
-                  <td class="calendar-date">
-                    <p class="date ${pastEvent ? "past-event\"" : "\""}>${event.date}</p>
-                    <p class="time">${event.time}</p>
-                  </td>
-                  <td class="calendar-location">
-                    <p class="location-name">
-                      <a href="${event.locationLink}"${pastEvent ? " class=\"past-event\"" : ""}]>${event.locationName}</a>
-                    </p>
-                    <p class="location-address">${event.locationAddress}</p>
-                  </td>
-                  <td class="calendar-tickets">
-                    ${event.ticketLink !== `` ? `<a target="_blank" rel="noopener noreferrer" href="${event.ticketLink}">Tickets</a>` : ``}
-                  </td>
-                </tr>`
-            }
-        }
-    })
-}
-
 /*-------------------------------------------- MAILING LIST -----------------------------------------*/
 const mailingListDiv = document.getElementById("mailing-list");
 const mailingListForm = document.getElementsByClassName("mailing-list-form")[0];
