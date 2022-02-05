@@ -1,4 +1,3 @@
-import { generateVisuals } from './videos.js'
 import { generateDiscography } from "./songs.js";
 import { generateCalendar } from "./events.js";
 /*-------------------------------------- GENERAL PAGE FORMAT ---------------------------------------------------------------*/
@@ -8,18 +7,17 @@ const logo = document.getElementById("logo");
 
 window.onload = function(){
     pageSize();
-
-    const videos  = generateVisuals();
-    document.getElementById("video-container").innerHTML = videos.videoHtml;
-    document.getElementById("video-nav").innerHTML = videos.buttonHtml;
-    videos.clickableElements.forEach(value => {document.getElementById(value).onclick = switchVideo});
-    videoButtons = videos.clickableElements;
-
+    
     const discography = generateDiscography();
+
     document.getElementById("music-container").innerHTML = discography.html;
     discography.clickableElements.forEach(value => {document.getElementById(value).onclick = musicPlayerExpanded});
 
     document.getElementById("calendar-body").innerHTML = generateCalendar();
+
+    for (let i = 0; i < videoButtons.length; i++){
+        videoButtons[i].onclick = switchVideo;
+    }
 
     loadingFinished();
 }
@@ -172,7 +170,7 @@ async function musicPlayerExpanded(event){
 }
 
 /*------------------------------------------- VISUALS -----------------------------------------------*/
-let videoButtons = [];
+const videoButtons = [document.getElementById("tfg-video-button"), document.getElementById("bts-sw-video-button"), document.getElementById("planes-video-button"), document.getElementById('tts-video-button'), document.getElementById('ws-video-button')];
 // const featuredWatchButton = document.getElementById("featured-watch-button");
 
 function switchVideo(event){
