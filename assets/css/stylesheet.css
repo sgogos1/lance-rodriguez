@@ -615,7 +615,7 @@ body {
     visibility: hidden;
 }
 
-.video-nav {
+#video-nav {
     display: flex;
     align-items: center;
     justify-content: center;

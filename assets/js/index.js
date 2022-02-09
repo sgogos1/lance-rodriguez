@@ -1,4 +1,4 @@
-import { generateVisuals } from './videos.js'
+import { generateVisuals } from "./videos.js";
 import { generateDiscography } from "./songs.js";
 import { generateCalendar } from "./events.js";
 /*-------------------------------------- GENERAL PAGE FORMAT ---------------------------------------------------------------*/
@@ -176,15 +176,15 @@ let videoButtons = [];
 // const featuredWatchButton = document.getElementById("featured-watch-button");
 
 function switchVideo(event){
-
     videoButtons.forEach(value => {value.classList.remove("current-video-button")});
 
     let selectedButton;
-    event.target.id === 'featured-watch-button' ? selectedButton = videoButtons[0] : selectedButton = document.getElementById(event.target.id);
+    // event.target.id === 'featured-watch-button' ? selectedButton = videoButtons[0] : 
+    selectedButton = document.getElementById(event.target.id);
     selectedButton.classList.add("current-video-button");
     
     const previousVideo = document.getElementsByClassName("current-video")[0];
-    const selectedVideo = document.getElementById(selectedButton.id.split("-button")[0]);
+    const selectedVideo = document.getElementById(selectedButton.id.split("_button")[0]);
 
     if (previousVideo.id !== selectedVideo.id){
         previousVideo.classList.remove("current-video");
@@ -193,9 +193,9 @@ function switchVideo(event){
         selectedVideo.classList.remove("hidden-video");
     }
 
-    if (event.target.id === 'featured-watch-button'){
-        selectedVideo.setAttribute("src", selectedVideo.getAttribute("src")+"?autoplay=1");
-    }
+    // if (event.target.id === 'featured-watch-button'){
+    //     selectedVideo.setAttribute("src", selectedVideo.getAttribute("src")+"?autoplay=1");
+    // }
 }
 
 // featuredWatchButton.onclick = switchVideo;
