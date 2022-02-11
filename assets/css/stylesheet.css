@@ -66,9 +66,9 @@ body {
 }
 
 #background {
-    background-image: url('/assets/images/lance/lance-tides.jpg');
+    background-image: url('/assets/images/albums/lmk_test.jpg');
     background-position: center center;
-    background-size: cover;
+    background-size: var(--background-size-method);
     position: fixed;
     top: 0;
     left: 0;
@@ -141,9 +141,9 @@ body {
 .top {
     --header-background-color: transparent;
     --header-text-color: var(--white);
-    --header-text-hover: grey;
+    --header-text-hover: black;
     --header-logo-color: var(--white-filter);
-    --header-logo-hover: var(--apple-grey-filter);
+    --header-logo-hover: var(--black-filter);
     --social-links-color: var(--white-filter);
     --tidal-filter: var(--offwhite-filter);
     --nav-button-width: 0.15rem;
@@ -188,6 +188,7 @@ body {
     --social-links-height: 3.25vmax;
     --video-nav-circle-size: 2.15vmax;
     --video-nav-circle-margin: 0.75% 1.25%;
+    --background-size-method: cover;
 }
 
 .top-mobile {
@@ -225,6 +226,7 @@ body {
     --social-links-height: 2.15vmax;
     --video-nav-circle-size: 1.15vmax;
     --video-nav-circle-margin: 0% 0.5%;
+    --background-size-method: contain;
 }
 
 .top-desktop {
@@ -434,7 +436,7 @@ body {
     text-decoration: none;
     border: white solid 0.45vmax;
     padding: 2% 3%;
-    margin: 1% 2%;
+    margin: 1% 5%;
     color: white;
     transition: all .25s;
     white-space: nowrap;
@@ -737,7 +739,7 @@ body {
 }
 
 .past-event {
-    text-decoration: line-through 0.5vmax;
+    text-decoration: line-through 0.3vmax;
 }
 
 /* ----------- Social Media Links --------------------------*/
