@@ -1,5 +1,5 @@
-import { generateVisuals } from "./videos.js";
-import { generateDiscography } from "./songs.js";
+import { generateVisuals } from "./videos.js"
+import { generateDiscography} from "./songs.js"
 import { generateCalendar } from "./events.js";
 /*-------------------------------------- GENERAL PAGE FORMAT ---------------------------------------------------------------*/
 const body = document.body;
@@ -8,18 +8,28 @@ const logo = document.getElementById("logo");
 
 window.onload = function(){
     pageSize();
+    
+    fetch('assets/json/videos.json').then(response => response.json()).then(obj => {
+        const visuals = generateVisuals(obj.videos);
+        document.getElementById("video-container").innerHTML = visuals.videoHtml;
+        document.getElementById("video-nav").innerHTML = visuals.buttonHtml;
+        visuals.clickableElements.forEach(value => {
+            const element = document.getElementById(value);
+            element.onclick = switchVideo;
+            videoButtons.push(element);
+        })
+    });
 
-    const videos  = generateVisuals();
-    document.getElementById("video-container").innerHTML = videos.videoHtml;
-    document.getElementById("video-nav").innerHTML = videos.buttonHtml;
-    videos.clickableElements.forEach(value => {document.getElementById(value).onclick = switchVideo});
-    videoButtons = videos.clickableElements;
+    fetch('assets/json/songs.json').then(response => response.json()).then(obj => {
+        const discography = generateDiscography(obj.songs);
+        document.getElementById("music-container").innerHTML = discography.html;
+        discography.clickableElements.forEach(value => {document.getElementById(value).onclick = musicPlayerExpanded});
+    });
 
-    const discography = generateDiscography();
-    document.getElementById("music-container").innerHTML = discography.html;
-    discography.clickableElements.forEach(value => {document.getElementById(value).onclick = musicPlayerExpanded});
-
-    document.getElementById("calendar-body").innerHTML = generateCalendar();
+    fetch('assets/json/events.json').then(response => response.json()).then(obj => {
+        const events = generateCalendar(obj.events);
+        document.getElementById("calendar-body").innerHTML = events;
+    });
 
     loadingFinished();
 }
@@ -172,15 +182,16 @@ async function musicPlayerExpanded(event){
 }
 
 /*------------------------------------------- VISUALS -----------------------------------------------*/
-let videoButtons = [];
-// const featuredWatchButton = document.getElementById("featured-watch-button");
+const videoButtons = [];
+const featuredWatchButton = document.getElementById("featured-watch-button");
 
 function switchVideo(event){
     videoButtons.forEach(value => {value.classList.remove("current-video-button")});
 
     let selectedButton;
-    // event.target.id === 'featured-watch-button' ? selectedButton = videoButtons[0] : 
-    selectedButton = document.getElementById(event.target.id);
+    event.target.id === 'featured-watch-button' 
+        ? selectedButton = videoButtons[0] 
+        : selectedButton = document.getElementById(event.target.id);
     selectedButton.classList.add("current-video-button");
     
     const previousVideo = document.getElementsByClassName("current-video")[0];
@@ -193,12 +204,12 @@ function switchVideo(event){
         selectedVideo.classList.remove("hidden-video");
     }
 
-    // if (event.target.id === 'featured-watch-button'){
-    //     selectedVideo.setAttribute("src", selectedVideo.getAttribute("src")+"?autoplay=1");
-    // }
+    if (event.target.id === 'featured-watch-button'){
+        selectedVideo.setAttribute("src", selectedVideo.getAttribute("src")+"?autoplay=1");
+    }
 }
 
-// featuredWatchButton.onclick = switchVideo;
+featuredWatchButton.onclick = switchVideo;
 /*-------------------------------------------- MAILING LIST -----------------------------------------*/
 const mailingListDiv = document.getElementById("mailing-list");
 const mailingListForm = document.getElementsByClassName("mailing-list-form")[0];

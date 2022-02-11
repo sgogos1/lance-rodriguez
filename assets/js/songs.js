@@ -1,11 +1,7 @@
-let songsJson;
-fetch('assets/json/songs.json').then(response => response.json()).then(obj => {songsJson = obj.songs});
-
-function generateDiscography(){
+function generateDiscography(songsJson){
+    const clickableElements = [];
+    let html = "";
     if (songsJson && songsJson.length > 0){
-        const clickableElements = [];
-        let html = "";
-
         for (let i = 0; i < songsJson.length; i++){
             const song = songsJson[i]
             const id = song.id
@@ -20,9 +16,8 @@ function generateDiscography(){
             clickableElements.push(`${id}-image`);
             clickableElements.push(`${id}-arrow`);
         }
-
-        return { html, clickableElements };
     }
+    return { html, clickableElements };
 }
 
 export { generateDiscography }
