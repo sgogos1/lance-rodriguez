@@ -180,7 +180,7 @@ body {
     --mailing-list-padding-bottom: 5%;
     --mailing-form-header-font-size: 3.25vmax;
     --calendar-width: 80vw;
-    --calendar-data-header-font-size: 2vmax;
+    --calendar-data-header-font-size: 1.6vmax;
     --calendar-data-subheader-font-size: 1.4vmax;
     --calendar-tickets-font-size: 1.4vmax;
     --featured-show-top-padding: 25%;
@@ -786,39 +786,39 @@ body {
     filter: var(--social-links-color);
 }
 
-.apple:hover {
+#apple:hover {
     filter: var(--apple-grey-filter);
 }
 
-.instagram:hover {
+#instagram:hover {
     filter: var(--instagram-violet-filter);
 }
 
-.facebook:hover {
+#facebook:hover {
     filter: var(--facebook-blue-filter);
 }
 
-.linktree:hover {
+#linktree:hover {
     filter: var(--linktree-green-filter);
 }
 
-.spotify:hover {
+#spotify:hover {
     filter: var(--spotify-green-filter);
 }
 
-.tidal:hover {
+#tidal:hover {
     filter: var(--tidal-filter);
 }
 
-.tiktok:hover {
+#tiktok:hover {
     filter: var(--tiktok-teal-filter);
 }
 
-.twitter:hover {
+#twitter:hover {
     filter: var(--twitter-blue-filter);
 }
 
-.youtube:hover {
+#youtube:hover {
     filter: var(--red-filter);
 }
 

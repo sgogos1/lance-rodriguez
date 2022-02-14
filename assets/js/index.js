@@ -1,3 +1,4 @@
+import { generateSocials } from "./socials.js"
 import { generateVisuals } from "./videos.js"
 import { generateDiscography} from "./songs.js"
 import { generateCalendar } from "./events.js";
@@ -9,6 +10,11 @@ const logo = document.getElementById("logo");
 window.onload = function(){
     pageSize();
     
+    fetch('assets/json/socials.json').then(response => response.json()).then(obj => {
+        const socials = generateSocials(obj.socials);
+        document.getElementById("main-social-links").innerHTML = socials.html;
+    })
+
     fetch('assets/json/videos.json').then(response => response.json()).then(obj => {
         const visuals = generateVisuals(obj.videos);
         document.getElementById("video-container").innerHTML = visuals.videoHtml;
@@ -17,7 +23,8 @@ window.onload = function(){
             const element = document.getElementById(value);
             element.onclick = switchVideo;
             videoButtons.push(element);
-        })
+        });
+        featuredVideo = visuals.featuredVideo;
     });
 
     fetch('assets/json/songs.json').then(response => response.json()).then(obj => {
@@ -183,6 +190,7 @@ async function musicPlayerExpanded(event){
 
 /*------------------------------------------- VISUALS -----------------------------------------------*/
 const videoButtons = [];
+let featuredVideo;
 const featuredWatchButton = document.getElementById("featured-watch-button");
 
 function switchVideo(event){
@@ -190,7 +198,7 @@ function switchVideo(event){
 
     let selectedButton;
     event.target.id === 'featured-watch-button' 
-        ? selectedButton = videoButtons[0] 
+        ? selectedButton = document.getElementById(`${featuredVideo}_button`)
         : selectedButton = document.getElementById(event.target.id);
     selectedButton.classList.add("current-video-button");
     

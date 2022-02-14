@@ -2,6 +2,7 @@ function generateVisuals(videosJson){
     const clickableElements = [];
     let videoHtml = "";
     let buttonHtml = "";
+    let featuredVideo;
     if (videosJson && videosJson.length > 0){
         for (let i = 0; i < videosJson.length; i++){
             const video = videosJson[i]
@@ -16,9 +17,13 @@ function generateVisuals(videosJson){
             buttonHtml += `<div id="${id}_button" class="video-nav-circle${currentButton}"></div>`
 
             clickableElements.push(`${id}_button`);
+
+            if (video.featured === "True"){
+                featuredVideo = id;
+            }
         }
     }
-    return { videoHtml, buttonHtml, clickableElements };
+    return { videoHtml, buttonHtml, clickableElements, featuredVideo};
 }
 
 export { generateVisuals }
