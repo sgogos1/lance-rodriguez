@@ -218,6 +218,12 @@ function switchVideo(event){
 }
 
 featuredWatchButton.onclick = switchVideo;
+/*-------------------------------------------- RETURN TO TOP ----------------------------------------*/
+const returnToTop = document.getElementById("return-to-top");
+returnToTop.onclick = function(){
+    document.scrollingElement.scrollTo(0, 0);
+}
+
 /*-------------------------------------------- MAILING LIST -----------------------------------------*/
 const mailingListDiv = document.getElementById("mailing-list");
 const mailingListForm = document.getElementsByClassName("mailing-list-form")[0];

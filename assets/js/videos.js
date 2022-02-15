@@ -14,7 +14,7 @@ function generateVisuals(videosJson){
 
             let currentButton = ""
             if (i == 0){currentButton = " current-video-button"}
-            buttonHtml += `<div id="${id}_button" class="video-nav-circle${currentButton}"></div>`
+            buttonHtml += `<div id="${id}_button" class="video-nav-circle${currentButton}" title="${video.title}"></div>`
 
             clickableElements.push(`${id}_button`);
 

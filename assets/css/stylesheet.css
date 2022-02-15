@@ -107,6 +107,7 @@ body {
     height: var(--loading-logo-height);
     width: fit-content;
     filter: var(--white-filter);
+    -webkit-trasition: filter 0.25s;
     transition: filter 0.25s;
 }
 
@@ -135,6 +136,7 @@ body {
     width: 100%;
     height: var(--header-height);
     border: 0;
+    -webkit-transition: all 0.25s;
     transition: all 0.25s;
 }
 
@@ -149,6 +151,7 @@ body {
     --nav-button-width: 0.15rem;
     --nav-button-height: 100%;
     --opacity: 1;
+    --return-to-top-bottom: -50%;
 }
 
 .scrolled {
@@ -161,6 +164,7 @@ body {
     --nav-button-width: 0.12rem;
     --nav-button-height: 80%;
     --opacity: 0.7;
+    --return-to-top-bottom: 0;
 }
 
 .mobile {
@@ -189,6 +193,7 @@ body {
     --video-nav-circle-size: 2.15vmax;
     --video-nav-circle-margin: 0.75% 1.25%;
     --background-size-method: cover;
+    --expand-arrow-margin: 0.08vmax;
 }
 
 .top-mobile {
@@ -227,6 +232,7 @@ body {
     --video-nav-circle-size: 1.15vmax;
     --video-nav-circle-margin: 0% 0.5%;
     --background-size-method: contain;
+    --expand-arrow-margin: 0.06vmax;
 }
 
 .top-desktop {
@@ -260,6 +266,7 @@ body {
 #logo {
     height: var(--header-logo-height);
     filter: var(--header-logo-color);
+    -webkit-transition: filter 0.25s, visibility 0.005s;
     transition: filter 0.25s, visibility 0.005s;
 }
 
@@ -285,6 +292,7 @@ body {
     bottom: 0;
     width: var(--nav-button-width);
     height: var(--nav-button-height);
+    -webkit-transition: all 0.25s;
     transition: all 0.25s;
 }
 
@@ -328,6 +336,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    -webkit-transition: all 0.25s;
     transition: all 0.25s;
     border: 0;
     opacity: var(--opacity);
@@ -438,7 +447,8 @@ body {
     padding: 2% 3%;
     margin: 1% 5%;
     color: white;
-    transition: all .25s;
+    -webkit-transition: all 0.25s;
+    transition: all 0.25s;
     white-space: nowrap;
 }
 
@@ -527,6 +537,7 @@ body {
 }
 
 .music-player {
+    -webkit-transition: height 0.2s;
     transition: height 0.2s;
     background: black;
     border: 0.01px darkslategray solid;
@@ -549,9 +560,10 @@ body {
 .expand-music-arrow::before, .expand-music-arrow::after {
     margin-top: 1%;
     content: "";
-    width: 0.2rem;
-    height: 22.5%;
+    width: 0.3rem;
+    height: 45%;
     color: white;
+    margin: var(--expand-arrow-margin);
 }
 
 .expand-music-arrow::before {
@@ -769,6 +781,7 @@ body {
     height: fit-content;
     height: -moz-fit-content;
     padding: 1% 1% 1% 1%;
+    -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 
@@ -820,6 +833,26 @@ body {
 
 #youtube:hover {
     filter: var(--red-filter);
+}
+
+/* ------------ Return to Top --------------------------- */
+#return-to-top {
+    cursor: pointer;
+    background-color: RGBA(255, 255, 255, 0.5);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+    position: fixed;
+    right: 0;
+    bottom: var(--return-to-top-bottom);
+    margin: 2%;
+    -webkit-transition: bottom 0.75s ease-in-out, background-color 0.3s;
+    transition: bottom 0.75s ease-in-out, background-color 0.3s;
+}
+
+#return-to-top:hover {
+    background-color: RGBA(255, 255, 255, 0.7);
 }
 
 /* --------------- Footer ------------------------------- */
