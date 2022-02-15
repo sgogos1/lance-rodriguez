@@ -849,6 +849,9 @@ body {
     margin: 2%;
     -webkit-transition: bottom 0.75s ease-in-out, background-color 0.3s;
     transition: bottom 0.75s ease-in-out, background-color 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #return-to-top:hover {
