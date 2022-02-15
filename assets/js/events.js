@@ -19,7 +19,7 @@ function generateCalendar(eventsJson){
             html += 
             `<tr class="calendar-element">
                 <td class="calendar-date">
-                <p class="date ${pastEvent ? "past-event\"" : "\""}>${event.month}.${event.day}.${event.year}</p>
+                <p class="date"}>${event.month}.${event.day}.${event.year}</p>
                 <p class="time">${event.hour}:${event.minutes}${event.time_of_day}</p>
                 </td>
                 <td class="calendar-location">

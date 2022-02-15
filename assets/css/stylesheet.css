@@ -177,7 +177,7 @@ body {
     --featured-container-top-margin: 25%;
     --form-font-size: 2vmax;
     --mailing-form-header-margin-bottom: 2.5%;
-    --mailing-list-padding-bottom: 5%;
+    --mailing-list-padding-bottom: 3%;
     --mailing-form-header-font-size: 3.25vmax;
     --calendar-width: 80vw;
     --calendar-data-header-font-size: 1.6vmax;
@@ -215,7 +215,7 @@ body {
     --featured-container-top-margin: 7.5%;
     --form-font-size: 1.2vmax;
     --mailing-form-header-margin-bottom: 1.5%;
-    --mailing-list-padding-bottom: 2%;
+    --mailing-list-padding-bottom: 1%;
     --mailing-form-header-font-size: 2.5vmax;
     --calendar-width: 60vw;
     --calendar-data-header-font-size: 1.5vmax;
@@ -883,9 +883,16 @@ footer {
 
 .mailing-list-submit:hover {
     font-weight: bold;
-    background-color:red;
+    background-color:tan;
     color: white;
     border: white 3px solid;
+}
+
+.mailing-list-thanks {
+    color: white; 
+    text-align: center;
+    font-weight: bold;
+    font-size: var(--mailing-form-header-font-size);
 }
 
 #footer-info {
@@ -910,7 +917,7 @@ footer {
 
 #author-link:hover {
     text-decoration: none;
-    color:red;
+    color: tan;
 }
 
 #footer-logo {
