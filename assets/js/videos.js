@@ -7,14 +7,19 @@ function generateVisuals(videosJson){
         for (let i = 0; i < videosJson.length; i++){
             const video = videosJson[i]
             const id = video.id
-            
-            let currentVideo = ""
-            if (video.featured === "True"){currentVideo = " current-video"}
-            videoHtml += `<iframe id="${id}" class="video${currentVideo}" src="${video.source}" title="${video.title}" style="border: none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
 
-            let currentButton = ""
-            if (video.featured === "True"){currentButton = " current-video-button"}
-            buttonHtml += `<div id="${id}_button" class="video-nav-circle${currentButton}" title="${video.title}"></div>`
+            let videoClass, videoButton;
+            if (video.featured === "True"){
+                videoClass = " current-video"
+                videoButton = " current-video-button"
+            }
+            else {
+                videoClass = "  hidden-video"
+                videoButton = " "
+            }
+            videoHtml += `<iframe id="${id}" class="video${videoClass}" src="${video.source}" title="${video.title}" style="border: none" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+
+            buttonHtml += `<div id="${id}_button" class="video-nav-circle${videoButton}" title="${video.title}"></div>`
 
             clickableElements.push(`${id}_button`);
 
