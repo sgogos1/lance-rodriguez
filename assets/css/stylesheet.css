@@ -838,10 +838,10 @@ body {
 /* ------------ Return to Top --------------------------- */
 #return-to-top {
     cursor: pointer;
-    background-color: RGBA(255, 255, 255, 0.5);
     border-radius: 50%;
     width: 50px;
     height: 50px;
+    background-color: RGBA(255, 255, 255, 0.3);
     z-index: 1000;
     position: fixed;
     right: 0;
@@ -852,10 +852,21 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0.7;
+    border: tan 1px solid;
 }
 
 #return-to-top:hover {
     background-color: RGBA(255, 255, 255, 0.7);
+    opacity: 1.0;
+}
+
+#return-to-top-arrow {
+    transform: rotate(-90deg);
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    margin-right: 3px;
 }
 
 /* --------------- Footer ------------------------------- */
