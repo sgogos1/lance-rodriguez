@@ -212,7 +212,7 @@ function switchVideo(event){
         selectedVideo.classList.remove("hidden-video");
     }
 
-    if (event.target.id === 'featured-watch-button'){
+    if (event.target.id === 'featured-watch-button' && !selectedVideo.getAttribute("src").endsWith("?autoplay=1")){
         selectedVideo.setAttribute("src", selectedVideo.getAttribute("src")+"?autoplay=1");
     }
 }
