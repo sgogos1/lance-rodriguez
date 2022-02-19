@@ -1,13 +1,9 @@
-let eventsJson;
-fetch('assets/json/events.json').then(response => response.json()).then(obj => {eventsJson = obj.events});
-
-/*---------------------------------------------- EVENTS ---------------------------------------------*/
-function generateCalendar(){
+function generateCalendar(eventsJson){
+    let html = "";
     if (eventsJson && eventsJson.length > 0){
 
         const currentTime = new Date();
         const currentYearTwoDigits = Number(currentTime.getFullYear().toString().slice(2, 4));
-        let result = "";
 
         for (let i = 0; i < eventsJson.length; i++) {
             const event = eventsJson[i];
@@ -20,10 +16,10 @@ function generateCalendar(){
                 pastEvent = true
             }
 
-            result += 
+            html += 
             `<tr class="calendar-element">
                 <td class="calendar-date">
-                <p class="date ${pastEvent ? "past-event\"" : "\""}>${event.month}.${event.day}.${event.year}</p>
+                <p class="date"}>${event.month}.${event.day}.${event.year}</p>
                 <p class="time">${event.hour}:${event.minutes}${event.time_of_day}</p>
                 </td>
                 <td class="calendar-location">
@@ -37,9 +33,8 @@ function generateCalendar(){
                 </td>
             </tr>`
         }
-
-        return result;
     }
+    return html;
 }
 
 export { generateCalendar }

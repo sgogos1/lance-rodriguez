@@ -1,0 +1,58 @@
+{
+    "socials": [
+        {
+            "id": "apple",
+            "link": "https://music.apple.com/us/artist/lance-rodriguez/1404765543",
+            "image": "assets/images/platforms/apple-dark.svg",
+            "title": "Apple Music"
+        },
+        {
+            "id": "facebook",
+            "link": "https://www.facebook.com/lancemichaelrodriguez",
+            "image": "assets/images/platforms/facebook-dark.svg",
+            "title": "Facebook"
+        },
+        {
+            "id": "instagram",
+            "link": "https://www.instagram.com/lancemrodriguez/",
+            "image": "assets/images/platforms/instagram-dark.svg",
+            "title": "Instagram"
+        },
+        {
+            "id": "linktree",
+            "link": "https://linktr.ee/Lancemmusic",
+            "image": "assets/images/platforms/linktree-black.svg",
+            "title": "Linktree"
+        },
+        {
+            "id": "spotify",
+            "link": "https://open.spotify.com/artist/7EnGTMpgwHhfzgeaSd1tkE",
+            "image": "assets/images/platforms/spotify-light-theme.svg",
+            "title": "Spotify"
+        },
+        {
+            "id": "tidal",
+            "link": "https://tidal.com/browse/artist/10023018",
+            "image": "assets/images/platforms/tidal.svg",
+            "title": "Tidal"
+        },
+        {
+            "id": "tiktok",
+            "link": "https://www.tiktok.com/@lancemrodriguez?",
+            "image": "assets/images/platforms/tiktok.svg",
+            "title": "TikTok"
+        },
+        {
+            "id": "twitter",
+            "link": "https://twitter.com/lancemrodriguez",
+            "image": "assets/images/platforms/twitter-dark.svg",
+            "title": "Twitter"
+        },
+        {
+            "id": "youtube",
+            "link": "https://www.youtube.com/channel/UCwenZLQztkSQ7MzKD_1yK9w",
+            "image": "assets/images/platforms/youtube-dark.svg",
+            "title": "Youtube"
+        }
+    ]   
+}
