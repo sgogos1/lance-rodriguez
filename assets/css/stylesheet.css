@@ -194,6 +194,8 @@ body {
     --video-nav-circle-margin: 0.75% 1.25%;
     --background-size-method: cover;
     --expand-arrow-margin: 0.08vmax;
+    --return-to-top-size: 4vmax;
+    --return-to-top-arrow-size: 3.5vmax;
 }
 
 .top-mobile {
@@ -233,6 +235,8 @@ body {
     --video-nav-circle-margin: 0% 0.5%;
     --background-size-method: contain;
     --expand-arrow-margin: 0.06vmax;
+    --return-to-top-size: 2.5vmax;
+    --return-to-top-arrow-size: 2vmax;
 }
 
 .top-desktop {
@@ -839,9 +843,8 @@ body {
 #return-to-top {
     cursor: pointer;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    background-color: RGBA(255, 255, 255, 0.3);
+    width: var(--return-to-top-size);
+    height: var(--return-to-top-size);
     z-index: 1000;
     position: fixed;
     right: 0;
@@ -849,18 +852,21 @@ body {
     margin: 2%;
     -webkit-transition: bottom 0.75s ease-in-out, background-color 0.3s;
     transition: bottom 0.75s ease-in-out, background-color 0.3s;
-    opacity: 0.7;
-    border: tan 1px solid;
-    font-size: 45px;
     color: white;
-    text-align: center;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
-#return-to-top:hover {
-    background-color: RGBA(255, 255, 255, 0.7);
+#return-to-top-arrow {
+    height: var(--return-to-top-arrow-size);
+    width: auto;
+    filter: var(--white-filter);
+    transition: all 0.5s;
+    opacity: 0.5;
+}
+
+#return-to-top-arrow:hover {
     opacity: 1.0;
 }
 
