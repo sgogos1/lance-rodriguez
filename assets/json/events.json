@@ -47,6 +47,18 @@
             "locationLink": "https://sodabarmusic.com",
             "locationAddress": "3615 El Cajon Blvd, San Diego, CA",
             "ticketLink": "https://link.dice.fm/qxvjQWtrymb"
+        },
+        {
+            "day": "06",
+            "month": "04",
+            "year": "22",
+            "hour": "6",
+            "minutes": "00",
+            "time_of_day": "PM",
+            "locationName": "MAVERICKS BEACH CLUB - EP RELEASE",
+            "locationLink": "https://www.maverickssd.com/",
+            "locationAddress": "860 Garnet Avenue, Pacific Beach, San Diego, CA 92109",
+            "ticketLink": ""
         }
     ]
 }
