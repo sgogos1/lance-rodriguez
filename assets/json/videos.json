@@ -1,10 +1,16 @@
 {
     "videos": [
         {
+            "id": "light_it_up_video",
+            "source": "https://www.youtube.com/embed/Z5tAuRSctuM",
+            "title": "Lance Rodriguez - Light It Up (Music Video)",
+            "featured": "True"
+        },
+        {
             "id": "lmk_video",
             "source": "https://www.youtube.com/embed/y6FV9-c0iN4",
             "title": "Lance Rodriguez - LMK (Music Video)",
-            "featured": "True"
+            "featured": "False"
         },
         {
             "id": "tides_video",
@@ -22,12 +28,6 @@
             "id": "planes_video",
             "source": "https://www.youtube.com/embed/uO7Y0NMmUkk",
             "title": "Lance Rodriguez - Planes (Music Video)",
-            "featured": "False"
-        },
-        {
-            "id": "trying_to_say_video",
-            "source": "https://www.youtube.com/embed/jDg7O_g-FXc",
-            "title": "Lance Rodriguez - Trying To Say (Music Video)",
             "featured": "False"
         }
     ]

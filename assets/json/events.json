@@ -28,8 +28,8 @@
             "day": "17",
             "month": "12",
             "year": "21",
-            "hour": "7",
-            "minutes": "00",
+            "hour": "8",
+            "minutes": "30",
             "time_of_day": "PM",
             "locationName": "MONIKER COCKTAIL",
             "locationLink": "https://www.libertystation.com/go/moniker-general",
@@ -52,12 +52,12 @@
             "day": "06",
             "month": "04",
             "year": "22",
-            "hour": "6",
+            "hour": "7",
             "minutes": "00",
             "time_of_day": "PM",
-            "locationName": "MAVERICKS BEACH CLUB - EP RELEASE",
+            "locationName": "MAVERICKS - EP RELEASE",
             "locationLink": "https://www.maverickssd.com/",
-            "locationAddress": "860 Garnet Avenue, Pacific Beach, San Diego, CA 92109",
+            "locationAddress": "860 Garnet Avenue,San Diego, CA",
             "ticketLink": ""
         }
     ]

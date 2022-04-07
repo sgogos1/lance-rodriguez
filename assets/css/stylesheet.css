@@ -66,7 +66,7 @@ body {
 }
 
 #background {
-    background-image: url('/assets/images/lance/lance-lmk.webp');
+    background-image: url('/assets/images/albums/dark_light.webp');
     background-position: center center;
     background-size: var(--background-size-method);
     position: fixed;
@@ -233,7 +233,7 @@ body {
     --social-links-height: 2.15vmax;
     --video-nav-circle-size: 1.15vmax;
     --video-nav-circle-margin: 0% 0.5%;
-    --background-size-method: contain;
+    --background-size-method: cover;
     --expand-arrow-margin: 0.06vmax;
     --return-to-top-size: 2.5vmax;
     --return-to-top-arrow-size: 2vmax;
@@ -613,6 +613,7 @@ body {
     height: 0;
     overflow: hidden;
     border: 0.01px darkslategray solid;
+    background-color: black;
 }
 
 .video {
