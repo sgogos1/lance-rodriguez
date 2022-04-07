@@ -529,14 +529,14 @@ body {
     margin: 1.5% var(--album-image-margin);
 }
 
-.album {
+.song {
     width: 100%;
     cursor: pointer;
     border: 0.01px darkslategray solid;
     border-bottom: none;
 }
 
-.album:hover{
+.song:hover{
     opacity: 0.9;
 }
 

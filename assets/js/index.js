@@ -177,7 +177,12 @@ async function musicPlayerExpanded(event){
     const musicPlayer = document.getElementById(`${itemClicked.split("-")[0]}-music`);
 
     if (musicPlayer.getAttribute("height") === "0"){
-        musicPlayer.setAttribute("height", "80px");
+        if (musicPlayer.classList.contains("album")){
+            musicPlayer.setAttribute("height", "300px");
+        }
+        else {
+            musicPlayer.setAttribute("height", "80px");
+        }
         musicPlayer.style.setProperty("border-top", "0.01px darkslategray solid");
         document.getElementById(itemClicked).classList.add("music-expanded");
     }
