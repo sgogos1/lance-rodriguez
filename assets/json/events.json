@@ -1,64 +1,16 @@
 {
     "events": [
         {
-            "day": "15",
+            "day": "24",
             "month": "07",
-            "year": "21",
-            "hour": "5",
-            "minutes": "00",
-            "time_of_day": "PM",
-            "locationName": "RESIDENT",
-            "locationLink": "https://www.residentdtla.com",
-            "locationAddress": "428 S Hewitt, Los Angeles, CA",
-            "ticketLink": "https://www.eventbrite.com/e/breaking-sound-la-feat-ashrr-jack-shields-cj-may-lance-rodriguez-more-tickets-156029306857?ref=eios"
-        },
-        {
-            "day": "22",
-            "month": "08",
-            "year": "21",
-            "hour": "5",
-            "minutes": "00",
-            "time_of_day": "PM",
-            "locationName": "MONIKER COCKTAIL",
-            "locationLink": "https://www.libertystation.com/go/moniker-general",
-            "locationAddress": "2860 Sims Road, San Diego, CA",
-            "ticketLink": ""
-        },
-        {
-            "day": "17",
-            "month": "12",
-            "year": "21",
-            "hour": "8",
-            "minutes": "30",
-            "time_of_day": "PM",
-            "locationName": "MONIKER COCKTAIL",
-            "locationLink": "https://www.libertystation.com/go/moniker-general",
-            "locationAddress": "2860 Sims Road, San Diego, CA",
-            "ticketLink": ""
-        },
-        {
-            "day": "26",
-            "month": "01",
             "year": "22",
             "hour": "7",
             "minutes": "00",
             "time_of_day": "PM",
-            "locationName": "SODA BAR",
-            "locationLink": "https://sodabarmusic.com",
-            "locationAddress": "3615 El Cajon Blvd, San Diego, CA",
-            "ticketLink": "https://link.dice.fm/qxvjQWtrymb"
-        },
-        {
-            "day": "06",
-            "month": "04",
-            "year": "22",
-            "hour": "7",
-            "minutes": "00",
-            "time_of_day": "PM",
-            "locationName": "MAVERICKS - EP RELEASE",
-            "locationLink": "https://www.maverickssd.com/",
-            "locationAddress": "860 Garnet Avenue, San Diego, CA",
-            "ticketLink": ""
+            "locationName": "ADULTS ONLY",
+            "locationLink": "https://www.adultsonlybar.la/",
+            "locationAddress": "7065 1/2 Sunset Blvd, Hollywood, CA 90028",
+            "ticketLink": "https://www.tixr.com/groups/breakingsoundla/events/breaking-sound-la-at-adults-only-07-24-46399"
         }
     ]
 }
