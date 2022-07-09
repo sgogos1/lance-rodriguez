@@ -7,10 +7,22 @@
             "hour": "7",
             "minutes": "00",
             "time_of_day": "PM",
-            "locationName": "ADULTS ONLY",
+            "locationName": "ADULTS ONLY (21+)",
             "locationLink": "https://www.adultsonlybar.la/",
             "locationAddress": "7065 1/2 Sunset Blvd, Hollywood, CA 90028",
             "ticketLink": "https://www.tixr.com/groups/breakingsoundla/events/breaking-sound-la-at-adults-only-07-24-46399"
+        },
+        {
+            "day": "05",
+            "month": "08",
+            "year": "22",
+            "hour": "7",
+            "minutes": "30",
+            "time_of_day": "PM",
+            "locationName": "SODA BAR (21+)",
+            "locationLink": "https://sodabarmusic.com",
+            "locationAddress": "3615 El Cajon Blvd, San Diego, CA",
+            "ticketLink": "https://dice.fm/event/6rlx7-lance-rodriguez-jack-van-cleaf-gable-short-jake-5th-aug-soda-bar-san-diego-tickets"
         }
     ]
 }
