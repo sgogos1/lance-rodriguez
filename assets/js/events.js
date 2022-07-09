@@ -24,7 +24,7 @@ function generateCalendar(eventsJson){
                 </td>
                 <td class="calendar-location">
                 <p class="location-name">
-                    <a href="${event.locationLink}"${pastEvent ? " class=\"past-event\"" : ""}]>${event.locationName}</a>
+                    <a target="_blank" rel="noopener noreferrer" href="${event.locationLink}"${pastEvent ? " class=\"past-event\"" : ""}]>${event.locationName}</a>
                 </p>
                 <p class="location-address">${event.locationAddress}</p>
                 </td>
