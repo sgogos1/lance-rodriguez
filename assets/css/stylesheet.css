@@ -177,7 +177,7 @@ body {
 .portrait {
     --nav-menu-link-padding: 0% 5% 0.5% 5%;
     --nav-menu-font-size: 2.25vmax;
-    --featured-show-time-font-size: 4.25vmax;
+    --featured-show-time-font-size: 4.5vmax;
     --featured-header-size: 10vmax;
     --featured-link-font-size: 2.75vmax;
     --content-width: 80%;
@@ -217,7 +217,7 @@ body {
 .landscape {
     --nav-menu-link-padding: 0% 5% 0.5% 5%;
     --nav-menu-font-size: 1vmax;
-    --featured-show-time-font-size: 3.25vmax;
+    --featured-show-time-font-size: 4vmax;
     --featured-header-size: 7vmax;
     --featured-link-font-size: 2.5vmax;
     --content-width: 80%;
@@ -497,7 +497,9 @@ body {
     font-size: var(--featured-show-time-font-size);
     font-weight: normal;
     margin-block: 0;
-    margin-bottom: 1%;
+    margin-top: 1%;
+    /* margin-bottom: 1%; */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .featured-show-location {
@@ -517,7 +519,7 @@ body {
 
 .featured-image {
     width: var(--featured-image-width);
-
+    border: white solid 0.1vmax;
 }
 
 /* ---------- Discography/Music ----------------------------*/

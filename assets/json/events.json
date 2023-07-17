@@ -1,28 +1,40 @@
 {
     "events": [
         {
-            "day": "24",
-            "month": "07",
-            "year": "22",
-            "hour": "7",
-            "minutes": "00",
-            "time_of_day": "PM",
-            "locationName": "ADULTS ONLY (21+)",
-            "locationLink": "https://www.adultsonlybar.la/",
-            "locationAddress": "7065 1/2 Sunset Blvd, Hollywood, CA 90028",
-            "ticketLink": "https://www.tixr.com/groups/breakingsoundla/events/breaking-sound-la-at-adults-only-07-24-46399"
-        },
-        {
-            "day": "05",
-            "month": "08",
-            "year": "22",
+            "day": "17",
+            "month": "05",
+            "year": "23",
             "hour": "7",
             "minutes": "30",
             "time_of_day": "PM",
-            "locationName": "SODA BAR (21+)",
-            "locationLink": "https://sodabarmusic.com",
-            "locationAddress": "3615 El Cajon Blvd, San Diego, CA",
-            "ticketLink": "https://dice.fm/event/6rlx7-lance-rodriguez-jack-van-cleaf-gable-short-jake-5th-aug-soda-bar-san-diego-tickets"
+            "locationName": "CRESCENT BALLROOM (21+)",
+            "locationLink": "https://www.crescentphx.com/calendar/",
+            "locationAddress": "308 N 2nd Ave, Phoenix, AZ",
+            "ticketLink": "https://www.crescentphx.com/calendar/"
+        },
+                {
+            "day": "19",
+            "month": "05",
+            "year": "23",
+            "hour": "7",
+            "minutes": "00",
+            "time_of_day": "PM",
+            "locationName": "THE WAKEHOUSE (21+)",
+            "locationLink": "https://www.facebook.com/thewakehouserules",
+            "locationAddress": "850 N Kings River Rd, Reedley, CA",
+            "ticketLink": "https://www.facebook.com/thewakehouserules"
+        },
+                        {
+            "day": "20",
+            "month": "05",
+            "year": "23",
+            "hour": "7",
+            "minutes": "00",
+            "time_of_day": "PM",
+            "locationName": "HOTEL UTAH (21+)",
+            "locationLink": "https://wl.seetickets.us/event/BB-IndieMixtapeLive/549066?afflky=HotelUtahSaloon",
+            "locationAddress": "500-520 4th St, San Francisco, CA",
+            "ticketLink": "https://wl.seetickets.us/event/BB-IndieMixtapeLive/549066?afflky=HotelUtahSaloon"
         }
     ]
 }
