@@ -5,41 +5,20 @@
             "title": "Lance Rodriguez - Empath",
             "image": "assets/images/albums/empath/empath.webp",
             "source": "https://open.spotify.com/embed/album/3DfVDYsErIkqME4mmroRRa",
-            "album": "False"
+            "album": "True"
         },
         {
             "id": "dark_light",
             "title": "Lance Rodriguez - Dark Light",
             "image": "assets/images/albums/dark_light_album.webp",
             "source": "https://open.spotify.com/embed/album/6ddyiLaPxzcImGcPz1pyeg",
-            "album": "False"
+            "album": "True"
         },
         {
             "id": "let_me_know",
             "title": "Lance Rodriguez - Let Me Know",
             "image": "assets/images/albums/lmk.webp",
             "source": "https://open.spotify.com/embed/track/4D3sbjtrOyPU8PuFdS56Nc",
-            "album": "False"
-        },
-        {
-            "id": "tides",
-            "title": "Lance Rodriguez - Tides",
-            "image": "assets/images/albums/tides.webp",
-            "source": "https://open.spotify.com/embed/album/3XN2Iv0aTn1MNX88jOG0tL",
-            "album": "False"
-        },
-        {
-            "id": "too_far_gone",
-            "title": "Lance Rodriguez - Too Far Gone",
-            "image": "assets/images/albums/too-far-gone.webp",
-            "source": "https://open.spotify.com/embed/track/5lbXcajzIdJQDlMoxluAQB",
-            "album": "False"
-        },
-        {
-            "id": "planes",
-            "title": "Lance Rodriguez - Planes",
-            "image": "assets/images/albums/planes/planes.webp",
-            "source": "https://open.spotify.com/embed/album/4kBrJ4XFPBIQuxfNn8JiY6",
             "album": "False"
         }
     ]

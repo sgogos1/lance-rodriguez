@@ -8,36 +8,30 @@ const header = document.getElementById("header");
 const logo = document.getElementById("logo");
 const background = document.getElementById("background");
 
-window.onload = function(){
+window.onload = async function(){
     pageSize();
     
-    fetch('assets/json/socials.json').then(response => response.json()).then(obj => {
-        const socials = generateSocials(obj.socials);
-        document.getElementById("main-social-links").innerHTML = socials.html;
-    })
+    // Generate the social media bar on the right via JSON and then populating the HTML
+    const socials = await generateSocials();
+    document.getElementById("main-social-links").innerHTML = socials.html;
 
-    fetch('assets/json/videos.json').then(response => response.json()).then(obj => {
-        const visuals = generateVisuals(obj.videos);
-        document.getElementById("video-container").innerHTML = visuals.videoHtml;
-        document.getElementById("video-nav").innerHTML = visuals.buttonHtml;
-        visuals.clickableElements.forEach(value => {
-            const element = document.getElementById(value);
-            element.onclick = switchVideo;
-            videoButtons.push(element);
-        });
-        featuredVideo = visuals.featuredVideo;
+    // Generate visual section by loading videos via JSON and then populating the HTML
+    const visuals = await generateVisuals();
+    document.getElementById("video-container").innerHTML = visuals.videoHtml;
+    document.getElementById("video-nav").innerHTML = visuals.buttonHtml;
+    visuals.clickableElements.forEach(value => {
+        const element = document.getElementById(value);
+        element.onclick = switchVideo;
+        videoButtons.push(element);
     });
+    featuredVideo = visuals.featuredVideo;
 
-    fetch('assets/json/songs.json').then(response => response.json()).then(obj => {
-        const discography = generateDiscography(obj.songs);
-        document.getElementById("music-container").innerHTML = discography.html;
-        discography.clickableElements.forEach(value => {document.getElementById(value).onclick = musicPlayerExpanded});
-    });
+    const discography = await generateDiscography();
+    document.getElementById("music-container").innerHTML = discography.html;
+    discography.clickableElements.forEach(value => {document.getElementById(value).onclick = musicPlayerExpanded});
 
-    fetch('assets/json/events.json').then(response => response.json()).then(obj => {
-        const events = generateCalendar(obj.events);
-        document.getElementById("calendar-body").innerHTML = events;
-    });
+    const events = await generateCalendar();
+    document.getElementById("calendar-body").innerHTML = events.html;
 
     loadingFinished();
 }
@@ -183,10 +177,10 @@ async function musicPlayerExpanded(event){
 
     if (musicPlayer.getAttribute("height") === "0"){
         if (musicPlayer.classList.contains("album")){
-            musicPlayer.setAttribute("height", "300px");
+            musicPlayer.setAttribute("height", "153px");
         }
         else {
-            musicPlayer.setAttribute("height", "80px");
+            musicPlayer.setAttribute("height", "90px");
         }
         musicPlayer.style.setProperty("border-top", "0.01px darkslategray solid");
         document.getElementById(itemClicked).classList.add("music-expanded");

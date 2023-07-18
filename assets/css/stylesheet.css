@@ -465,7 +465,7 @@ body {
 
 #featured-content a:hover {
     border-radius: 20px;
-    background-color: RGBA(255, 255, 255, 0.4);
+    background-color: RGBA(102, 178, 255, 0.4);
     border-color: white;
     color: white;
     white-space: nowrap;
