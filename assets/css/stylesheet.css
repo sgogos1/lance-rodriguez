@@ -201,7 +201,7 @@ body {
     --expand-arrow-margin: 0.08vmax;
     --return-to-top-size: 4vmax;
     --return-to-top-arrow-size: 3.5vmax;
-    --featured-image-width: 90%;
+    --featured-image-width: 75%;
 }
 
 .top-portrait {
