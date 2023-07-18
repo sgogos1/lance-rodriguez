@@ -1,11 +1,18 @@
 {
     "songs": [
         {
+            "id": "empath",
+            "title": "Lance Rodriguez - Empath",
+            "image": "assets/images/albums/empath/empath.webp",
+            "source": "https://open.spotify.com/embed/album/3DfVDYsErIkqME4mmroRRa",
+            "album": "False"
+        },
+        {
             "id": "dark_light",
             "title": "Lance Rodriguez - Dark Light",
             "image": "assets/images/albums/dark_light_album.webp",
             "source": "https://open.spotify.com/embed/album/6ddyiLaPxzcImGcPz1pyeg",
-            "album": "True"
+            "album": "False"
         },
         {
             "id": "let_me_know",
@@ -33,13 +40,6 @@
             "title": "Lance Rodriguez - Planes",
             "image": "assets/images/albums/planes/planes.webp",
             "source": "https://open.spotify.com/embed/album/4kBrJ4XFPBIQuxfNn8JiY6",
-            "album": "False"
-        },
-        {
-            "id": "trying_to_say",
-            "title": "Lance Rodriguez - Trying To Say",
-            "image": "assets/images/albums/trying-to-say.webp",
-            "source": "https://open.spotify.com/embed/album/6nHAKbse2VYQeWxlottMgH",
             "album": "False"
         }
     ]
