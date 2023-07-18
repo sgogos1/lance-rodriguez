@@ -77,11 +77,11 @@ body {
 }
 
 .background-portrait {
-    background-image: url('/assets/images/albums/empath/EMPATH-LONG[01].webp')
+    background-image: url('/assets/images/albums/empath/empath_portrait_background.webp')
 }
 
 .background-landscape {
-    background-image: url('/assets/images/albums/empath/EMPATH-WIDE[01].webp')
+    background-image: url('/assets/images/albums/empath/empath_landscape_background.webp')
 }
 
 #loading-wrapper {
@@ -181,8 +181,8 @@ body {
     --featured-header-size: 10vmax;
     --featured-link-font-size: 2.75vmax;
     --content-width: 80%;
-    --album-image-width: 70%;
-    --album-image-margin: 15%;
+    --album-image-width: 90%;
+    --album-image-margin: 5%;
     --video-container-width: 80%;
     --background-size: auto 100%;
     --form-font-size: 2vmax;
@@ -202,6 +202,7 @@ body {
     --return-to-top-size: 4vmax;
     --return-to-top-arrow-size: 3.5vmax;
     --featured-image-width: 75%;
+    --featured-show-time-top-margin: 4%;
 }
 
 .top-portrait {
@@ -242,6 +243,7 @@ body {
     --return-to-top-size: 2.5vmax;
     --return-to-top-arrow-size: 2vmax;
     --featured-image-width: 65%;
+    --featured-show-time-top-margin: 2%;
 }
 
 .top-landscape {
@@ -451,13 +453,14 @@ body {
     min-height: fit-content;
     min-height: -moz-fit-content;
     text-decoration: none;
-    border: white solid 0.45vmin;
-    padding: 1% 2.5%;
+    /* border: white solid 0.45vmin; */
+    padding: 1% 1%;
     margin: 1% 5%;
     color: white;
     -webkit-transition: all 0.25s;
     transition: all 0.25s;
     white-space: nowrap;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #featured-content a:hover {
@@ -466,6 +469,7 @@ body {
     border-color: white;
     color: white;
     white-space: nowrap;
+    border: white solid 0.05vmin;
 }
 
 #featured-content h4 {
@@ -497,7 +501,7 @@ body {
     font-size: var(--featured-show-time-font-size);
     font-weight: normal;
     margin-block: 0;
-    margin-top: 1%;
+    margin-top: var(--featured-show-time-top-margin);
     /* margin-bottom: 1%; */
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

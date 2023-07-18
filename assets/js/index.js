@@ -201,7 +201,8 @@ async function musicPlayerExpanded(event){
 /*------------------------------------------- VISUALS -----------------------------------------------*/
 const videoButtons = [];
 let featuredVideo;
-const featuredWatchButton = document.getElementById("featured-watch-button");
+// TODO - Re-activate when EMPATH video is added
+// const featuredWatchButton = document.getElementById("featured-watch-button");
 
 function switchVideo(event){
     videoButtons.forEach(value => {value.classList.remove("current-video-button")});
@@ -227,7 +228,8 @@ function switchVideo(event){
     }
 }
 
-featuredWatchButton.onclick = switchVideo;
+// TODO - Re-activate when EMPATH video is added
+// featuredWatchButton.onclick = switchVideo;
 /*-------------------------------------------- RETURN TO TOP ----------------------------------------*/
 const returnToTop = document.getElementById("return-to-top");
 returnToTop.onclick = function(){
