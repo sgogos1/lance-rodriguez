@@ -6,6 +6,7 @@ import { generateCalendar } from "./events.js";
 const body = document.body;
 const header = document.getElementById("header");
 const logo = document.getElementById("logo");
+const background = document.getElementById("background");
 
 window.onload = function(){
     pageSize();
@@ -44,7 +45,7 @@ window.onload = function(){
 async function loadingFinished(){
 
     for (let i = 0; i < 2; i++){
-        document.getElementById("loading-logo").style.setProperty("filter", 'var(--red-filter)');
+        document.getElementById("loading-logo").style.setProperty("filter", 'var(--twitter-blue-filter)');
         await new Promise(r => setTimeout(r, 250));
         document.getElementById("loading-logo").style.setProperty("filter", 'var(--white-filter)');
         await new Promise(r => setTimeout(r, 250));
@@ -85,14 +86,18 @@ function pageSize(){
         }
     }
     if (window.innerWidth <= window.innerHeight){
-        body.classList.add("mobile");
-        body.classList.remove("desktop");
-        adjustScrollClasses(windowLoc, "mobile");
+        body.classList.add("portrait");
+        body.classList.remove("landscape");
+        background.classList.add("background-portrait");
+        background.classList.remove("background-landscape");
+        adjustScrollClasses(windowLoc, "portrait");
     }
     else {
-        body.classList.remove("mobile");
-        body.classList.add("desktop");
-        adjustScrollClasses(windowLoc, "desktop");
+        body.classList.remove("portrait");
+        body.classList.add("landscape");
+        background.classList.add("background-landscape");
+        background.classList.remove("background-portrait");
+        adjustScrollClasses(windowLoc, "landscape");
     }
 }
 
@@ -108,7 +113,7 @@ function adjustScrollClasses(windowLoc, mode){
         body.classList.remove(`top-${mode}`);
     }
 
-    mode === "mobile" ? mode = "desktop" : mode = "mobile";
+    mode === "portrait" ? mode = "landscape" : mode = "portrait";
     body.classList.remove(`scrolled-${mode}`);
     body.classList.remove(`top-${mode}`);
 }

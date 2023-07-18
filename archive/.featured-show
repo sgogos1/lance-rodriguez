@@ -5,12 +5,13 @@
     <a target="_blank" rel="noopener noreferrer" href="https://www.eventbrite.com/e/breaking-sound-la-feat-ashrr-jack-shields-cj-may-lance-rodriguez-more-tickets-156029306857?ref=eios"><h4 class="featured-show-tickets">TICKETS</h4></a>
 </div>
 
-.mobile
+.portrait {
     --featured-show-top-padding: 25%;
+}
 
-.desktop
+.landscape {
     --featured-show-top-padding: 5%;
-
+}
 
 #featured-show {
     padding-top: var(--featured-show-top-padding);
